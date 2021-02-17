@@ -1,9 +1,9 @@
 <?php
 
-define('__ROOT__', $_SERVER['DOCUMENT_ROOT']);
+// define('__ROOT__', $_SERVER['DOCUMENT_ROOT']);
 
 // setup composer autoloader
-require_once __ROOT__ . '/vendor/autoload.php';
+// require_once __ROOT__ . '/vendor/autoload.php';
 
 class App {
 
