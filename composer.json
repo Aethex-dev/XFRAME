@@ -1,0 +1,16 @@
+{
+    "name": "xenonmc/xenframe",
+    "description": "Advanced PHP Framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "XENONMC",
+            "email": "support@xenonmc.xyz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "twig/twig": "3.0"
+    }
+}
