@@ -11,6 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "twig/twig": "3.0"
+        "twig/twig": "3.0",
+        "xenframe/mvc": "dev-master"
     }
 }

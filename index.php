@@ -1,20 +1,12 @@
 <?php
 
-// define('__ROOT__', $_SERVER['DOCUMENT_ROOT']);
+$root = str_replace('\\', '/', __DIR__);
 
 // setup composer autoloader
-// require_once __ROOT__ . '/vendor/autoload.php';
+require_once $root . '/vendor/autoload.php';
 
-class App {
+use xenframe\mvc;
 
-    function say_hi($text) {
+$hi = new App();
 
-        return "Hello " . $text;
-
-    }
-
-}
-
-$jack = new App();
-
-echo $jack->say_hi('xfaon');
+echo $hi->hi();

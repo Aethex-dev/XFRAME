@@ -4,8 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc33d8c611ea0416c91e1a7c0f3f974b",
+    "content-hash": "f1aae6e2638e31ff89b67dd1ebf180b5",
     "packages": [
+        {
+            "name": "ehime/hello-world",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gabelbombe/hello-world.git",
+                "reference": "9d5ab9a32d95b11ad8e849f30ba2854b8cd0bc4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gabelbombe/hello-world/zipball/9d5ab9a32d95b11ad8e849f30ba2854b8cd0bc4c",
+                "reference": "9d5ab9a32d95b11ad8e849f30ba2854b8cd0bc4c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.8.*",
+                "phpunit/phpunit": "4.3.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HelloWorld": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jd Daniel",
+                    "email": "dodomeki@gmail.com"
+                }
+            ],
+            "description": "Sample Composer project",
+            "keywords": [
+                "helloworld",
+                "sample",
+                "test"
+            ],
+            "support": {
+                "issues": "https://github.com/Gabelbombe/hello-world/issues",
+                "source": "https://github.com/Gabelbombe/hello-world/tree/1.0.8-stable"
+            },
+            "time": "2015-07-31T20:11:05+00:00"
+        },
         {
             "name": "symfony/polyfill-ctype",
             "version": "dev-main",
@@ -239,7 +289,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ehime/hello-world": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

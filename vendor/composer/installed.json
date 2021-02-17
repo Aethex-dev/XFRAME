@@ -1,6 +1,59 @@
 {
     "packages": [
         {
+            "name": "ehime/hello-world",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gabelbombe/hello-world.git",
+                "reference": "9d5ab9a32d95b11ad8e849f30ba2854b8cd0bc4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Gabelbombe/hello-world/zipball/9d5ab9a32d95b11ad8e849f30ba2854b8cd0bc4c",
+                "reference": "9d5ab9a32d95b11ad8e849f30ba2854b8cd0bc4c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.8.*",
+                "phpunit/phpunit": "4.3.5"
+            },
+            "time": "2015-07-31T20:11:05+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "HelloWorld": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jd Daniel",
+                    "email": "dodomeki@gmail.com"
+                }
+            ],
+            "description": "Sample Composer project",
+            "keywords": [
+                "helloworld",
+                "sample",
+                "test"
+            ],
+            "support": {
+                "issues": "https://github.com/Gabelbombe/hello-world/issues",
+                "source": "https://github.com/Gabelbombe/hello-world/tree/1.0.8-stable"
+            },
+            "install-path": "../ehime/hello-world"
+        },
+        {
             "name": "symfony/polyfill-ctype",
             "version": "dev-main",
             "version_normalized": "dev-main",

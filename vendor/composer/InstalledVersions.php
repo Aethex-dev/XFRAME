@@ -30,11 +30,21 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'c13409a46f15f0132ba6c7f6eec741ab9d349655',
+    'reference' => '4a6e3c995d700a726ff2cd0daea8460c6fdae78b',
     'name' => 'xenonmc/xenframe',
   ),
   'versions' => 
   array (
+    'ehime/hello-world' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '9d5ab9a32d95b11ad8e849f30ba2854b8cd0bc4c',
+    ),
     'symfony/polyfill-ctype' => 
     array (
       'pretty_version' => 'dev-main',
@@ -71,7 +81,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'c13409a46f15f0132ba6c7f6eec741ab9d349655',
+      'reference' => '4a6e3c995d700a726ff2cd0daea8460c6fdae78b',
     ),
   ),
 );
