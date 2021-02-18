@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '336c77a7f3f06578662d185c6d6ad715ea156058',
+    'reference' => 'be08613b14997ba8a25ea545105eff80005134d4',
     'name' => 'xenonmc/xenframe',
   ),
   'versions' => 
@@ -38,7 +38,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '336c77a7f3f06578662d185c6d6ad715ea156058',
+      'reference' => 'be08613b14997ba8a25ea545105eff80005134d4',
     ),
   ),
 );
