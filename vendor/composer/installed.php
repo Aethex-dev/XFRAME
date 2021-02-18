@@ -6,41 +6,11 @@
     'aliases' => 
     array (
     ),
-    'reference' => '4d4090dace996e0119b7774e9974c3ce36613584',
+    'reference' => 'd7835833ae68c375a9a552c9d3f30b9486312092',
     'name' => 'xenonmc/xenframe',
   ),
   'versions' => 
   array (
-    'symfony/polyfill-ctype' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.22.x-dev',
-      ),
-      'reference' => 'c6c942b1ac76c82448322025e084cadc56048b4e',
-    ),
-    'symfony/polyfill-mbstring' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.22.x-dev',
-      ),
-      'reference' => '5232de97ee3b75b0360528dae24e73db49566ab1',
-    ),
-    'twig/twig' => 
-    array (
-      'pretty_version' => '3.x-dev',
-      'version' => '3.9999999.9999999.9999999-dev',
-      'aliases' => 
-      array (
-        0 => '9999999-dev',
-      ),
-      'reference' => '1f3b7e2c06cc05d42936a8ad508ff1db7975cdc5',
-    ),
     'xenframe/mvc-library' => 
     array (
       'pretty_version' => 'dev-main',
@@ -68,7 +38,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '4d4090dace996e0119b7774e9974c3ce36613584',
+      'reference' => 'd7835833ae68c375a9a552c9d3f30b9486312092',
     ),
   ),
 );
