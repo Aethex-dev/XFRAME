@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '7a04a6b27d2f5ae91f071b5ff2935dc6c57ea191',
+    'reference' => '8aa98546f300b722976f33d911d8c5e6b8e0e3f3',
     'name' => 'xenonmc/xenframe',
   ),
   'versions' => 
@@ -81,7 +81,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '7a04a6b27d2f5ae91f071b5ff2935dc6c57ea191',
+      'reference' => '8aa98546f300b722976f33d911d8c5e6b8e0e3f3',
     ),
   ),
 );

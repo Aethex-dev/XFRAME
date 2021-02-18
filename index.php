@@ -9,8 +9,6 @@ $root = str_replace('\\', '/', __DIR__);
 // setup composer autoloader
 require_once $root . '/vendor/autoload.php';
 
-use xenframe\hello\Main;
+use xenframe\hello\App;
 
-$hi = new Main();
-
-echo $hi->hi();
+$hi = new App();
