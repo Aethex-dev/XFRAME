@@ -6,8 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'xenframe\\Mvc\\' => array($vendorDir . '/xenframe/mvc-library/src'),
-    'Twig\\' => array($vendorDir . '/twig/twig/src'),
-    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
-    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
+    'xenframe\\RouterLibrary\\' => array($vendorDir . '/xenframe/router-library/src'),
+    'xenframe\\MvcLibrary\\' => array($vendorDir . '/xenframe/mvc-library/src'),
 );

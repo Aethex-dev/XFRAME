@@ -9,7 +9,7 @@ $root = str_replace('\\', '/', __DIR__);
 // setup composer autoloader
 require_once $root . '/vendor/autoload.php';
 
-use xenframe\Mvc\Hello;
+use xenframe\MvcLibrary\Hello;
 
 $comp = new Hello();
 
