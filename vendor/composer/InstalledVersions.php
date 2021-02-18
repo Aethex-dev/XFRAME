@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '597c43a0c2e37304cdb417810132d65fd5b72272',
+    'reference' => '45a0700f0e63073ac185e9b82e003715600b870d',
     'name' => 'xenonmc/xenframe',
   ),
   'versions' => 
@@ -64,7 +64,7 @@ private static $installed = array (
       ),
       'reference' => '9b58bb8ac7a41d72fbb5a7dc643e07923e5ccc26',
     ),
-    'xenframe/mvc' => 
+    'xenframe/mvc-library' => 
     array (
       'pretty_version' => 'dev-main',
       'version' => 'dev-main',
@@ -72,7 +72,7 @@ private static $installed = array (
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'c0aa0759bc955fd47f394b25a70f6c02a5796067',
+      'reference' => '281982292360a31f0902d74322ca94cc5fb125a2',
     ),
     'xenonmc/xenframe' => 
     array (
@@ -81,7 +81,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '597c43a0c2e37304cdb417810132d65fd5b72272',
+      'reference' => '45a0700f0e63073ac185e9b82e003715600b870d',
     ),
   ),
 );

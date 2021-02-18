@@ -9,6 +9,8 @@ $root = str_replace('\\', '/', __DIR__);
 // setup composer autoloader
 require_once $root . '/vendor/autoload.php';
 
-use xenframe\mvc\App;
+use xenframe\Mvc\Hello;
 
-$hi = new App();   
+$comp = new Hello();
+
+echo $comp->say(3432432423432);

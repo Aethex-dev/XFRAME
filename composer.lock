@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e1bfc31a86ceefd0d14798fd8d07ee4",
+    "content-hash": "7cdd99e85a72fb0415915d833ec200ab",
     "packages": [
         {
             "name": "symfony/polyfill-ctype",
@@ -236,24 +236,27 @@
             "time": "2019-11-15T20:38:32+00:00"
         },
         {
-            "name": "xenframe/mvc",
+            "name": "xenframe/mvc-library",
             "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/mvc-library.git",
-                "reference": "c0aa0759bc955fd47f394b25a70f6c02a5796067"
+                "reference": "281982292360a31f0902d74322ca94cc5fb125a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/mvc-library/zipball/c0aa0759bc955fd47f394b25a70f6c02a5796067",
-                "reference": "c0aa0759bc955fd47f394b25a70f6c02a5796067",
+                "url": "https://api.github.com/repos/XENONMC-DEV/mvc-library/zipball/281982292360a31f0902d74322ca94cc5fb125a2",
+                "reference": "281982292360a31f0902d74322ca94cc5fb125a2",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=7.2.0"
+            },
             "default-branch": true,
-            "type": "library",
+            "type": "package",
             "autoload": {
                 "psr-4": {
-                    "mvc\\": "/src"
+                    "xenframe\\Mvc\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -262,22 +265,23 @@
             ],
             "authors": [
                 {
-                    "name": "XENONMC",
-                    "email": "support@xenonmc.xyz"
+                    "name": "Tibor Nagy",
+                    "email": "tibornagy77@gmail.com"
                 }
             ],
+            "description": "My first packagist package",
             "support": {
                 "issues": "https://github.com/XENONMC-DEV/mvc-library/issues",
                 "source": "https://github.com/XENONMC-DEV/mvc-library/tree/main"
             },
-            "time": "2021-02-18T15:13:31+00:00"
+            "time": "2021-02-18T19:09:01+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "xenframe/mvc": 20
+        "xenframe/mvc-library": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

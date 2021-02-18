@@ -12,9 +12,9 @@ class ComposerStaticInitab240f4df0b01decaa6c935a178df464
     );
 
     public static $prefixLengthsPsr4 = array (
-        'm' => 
+        'x' => 
         array (
-            'mvc\\' => 4,
+            'xenframe\\Mvc\\' => 13,
         ),
         'T' => 
         array (
@@ -28,9 +28,9 @@ class ComposerStaticInitab240f4df0b01decaa6c935a178df464
     );
 
     public static $prefixDirsPsr4 = array (
-        'mvc\\' => 
+        'xenframe\\Mvc\\' => 
         array (
-            0 => __DIR__ . '/..' . '/xenframe/mvc/src',
+            0 => __DIR__ . '/..' . '/xenframe/mvc-library/src',
         ),
         'Twig\\' => 
         array (
