@@ -6,21 +6,11 @@
     'aliases' => 
     array (
     ),
-    'reference' => '4a6e3c995d700a726ff2cd0daea8460c6fdae78b',
+    'reference' => '7a04a6b27d2f5ae91f071b5ff2935dc6c57ea191',
     'name' => 'xenonmc/xenframe',
   ),
   'versions' => 
   array (
-    'ehime/hello-world' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-        0 => '9999999-dev',
-      ),
-      'reference' => '9d5ab9a32d95b11ad8e849f30ba2854b8cd0bc4c',
-    ),
     'symfony/polyfill-ctype' => 
     array (
       'pretty_version' => 'dev-main',
@@ -50,6 +40,16 @@
       ),
       'reference' => '9b58bb8ac7a41d72fbb5a7dc643e07923e5ccc26',
     ),
+    'xenframe/hello' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '9b3558e11cfa8c1d981dc4e39c98cc74773fe577',
+    ),
     'xenonmc/xenframe' => 
     array (
       'pretty_version' => 'dev-main',
@@ -57,7 +57,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '4a6e3c995d700a726ff2cd0daea8460c6fdae78b',
+      'reference' => '7a04a6b27d2f5ae91f071b5ff2935dc6c57ea191',
     ),
   ),
 );
