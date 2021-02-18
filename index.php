@@ -12,5 +12,5 @@ require_once $root . '/vendor/autoload.php';
 use xenframe\MvcLibrary\Hello;
 
 $comp = new Hello();
-
-echo $comp->say(3432432423432);
+// no u dont get it, i reverted to show u, the xenframe folde rdont even show in github, ok ill install another package and then watch
+echo $comp->say(3432432423432); // yeah, but then you reinstalled it , ok now ima check changes and stage them

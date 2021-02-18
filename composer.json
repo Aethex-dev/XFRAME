@@ -12,6 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "xenframe/mvc-library": "dev-main",
-        "xenframe/router-library": "dev-main"
+        "xenframe/router-library": "dev-main",
+        "twig/twig": "3.x-dev"
     }
 }
