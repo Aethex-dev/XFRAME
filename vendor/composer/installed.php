@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8aa98546f300b722976f33d911d8c5e6b8e0e3f3',
+    'reference' => '597c43a0c2e37304cdb417810132d65fd5b72272',
     'name' => 'xenonmc/xenframe',
   ),
   'versions' => 
@@ -40,7 +40,7 @@
       ),
       'reference' => '9b58bb8ac7a41d72fbb5a7dc643e07923e5ccc26',
     ),
-    'xenframe/hello' => 
+    'xenframe/mvc' => 
     array (
       'pretty_version' => 'dev-main',
       'version' => 'dev-main',
@@ -48,7 +48,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '9b3558e11cfa8c1d981dc4e39c98cc74773fe577',
+      'reference' => 'c0aa0759bc955fd47f394b25a70f6c02a5796067',
     ),
     'xenonmc/xenframe' => 
     array (
@@ -57,7 +57,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8aa98546f300b722976f33d911d8c5e6b8e0e3f3',
+      'reference' => '597c43a0c2e37304cdb417810132d65fd5b72272',
     ),
   ),
 );

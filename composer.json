@@ -12,6 +12,6 @@
     "minimum-stability": "dev",
     "require": {
         "twig/twig": "3.0",
-        "xenframe/hello": "dev-main"
+        "xenframe/mvc": "dev-main"
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "802f9d581b7575aa30f979e80d9e9fc5",
+    "content-hash": "4e1bfc31a86ceefd0d14798fd8d07ee4",
     "packages": [
         {
             "name": "symfony/polyfill-ctype",
@@ -236,24 +236,24 @@
             "time": "2019-11-15T20:38:32+00:00"
         },
         {
-            "name": "xenframe/hello",
+            "name": "xenframe/mvc",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/XfaonXE/hello.git",
-                "reference": "9b3558e11cfa8c1d981dc4e39c98cc74773fe577"
+                "url": "https://github.com/XENONMC-DEV/mvc-library.git",
+                "reference": "c0aa0759bc955fd47f394b25a70f6c02a5796067"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XfaonXE/hello/zipball/9b3558e11cfa8c1d981dc4e39c98cc74773fe577",
-                "reference": "9b3558e11cfa8c1d981dc4e39c98cc74773fe577",
+                "url": "https://api.github.com/repos/XENONMC-DEV/mvc-library/zipball/c0aa0759bc955fd47f394b25a70f6c02a5796067",
+                "reference": "c0aa0759bc955fd47f394b25a70f6c02a5796067",
                 "shasum": ""
             },
             "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "xenframe\\hello\\": "/src"
+                    "mvc\\": "/src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -267,17 +267,17 @@
                 }
             ],
             "support": {
-                "issues": "https://github.com/XfaonXE/hello/issues",
-                "source": "https://github.com/XfaonXE/hello/tree/main"
+                "issues": "https://github.com/XENONMC-DEV/mvc-library/issues",
+                "source": "https://github.com/XENONMC-DEV/mvc-library/tree/main"
             },
-            "time": "2021-02-16T19:40:27+00:00"
+            "time": "2021-02-18T15:13:31+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "xenframe/hello": 20
+        "xenframe/mvc": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

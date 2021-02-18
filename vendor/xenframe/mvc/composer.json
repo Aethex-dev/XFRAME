@@ -1,5 +1,5 @@
 {
-    "name": "xenframe/hello",
+    "name": "xenframe/mvc",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -17,7 +17,7 @@
 
       "psr-4": {
       
-        "hello\\": "/src"
+        "mvc\\": "/src"
       
       }
 
