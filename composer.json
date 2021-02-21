@@ -10,5 +10,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "xframe/router": "dev-main"
     }
 }

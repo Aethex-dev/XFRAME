@@ -4,30 +4,30 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e9d01ca178977b61453f9f7cc41ec8a",
+    "content-hash": "61374b0dbca3e70974da07267d8ed6f0",
     "packages": [
         {
-            "name": "xenframe/mvc-library",
+            "name": "xframe/router",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/XENONMC-DEV/mvc-library.git",
-                "reference": "4bc8727eb1a49d6434afe3797b07258739fee3c6"
+                "url": "https://github.com/XENONMC-DEV/XFRAME-ROUTER.git",
+                "reference": "13305bcec4938708d6edadbcb86c2db1e1162a37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/mvc-library/zipball/4bc8727eb1a49d6434afe3797b07258739fee3c6",
-                "reference": "4bc8727eb1a49d6434afe3797b07258739fee3c6",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-ROUTER/zipball/13305bcec4938708d6edadbcb86c2db1e1162a37",
+                "reference": "13305bcec4938708d6edadbcb86c2db1e1162a37",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0"
+                "php": ">=8.0.0"
             },
             "default-branch": true,
             "type": "package",
             "autoload": {
                 "psr-4": {
-                    "xenframe\\MvcLibrary\\": "src/"
+                    "xframe\\Router\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -36,23 +36,23 @@
             ],
             "authors": [
                 {
-                    "name": "Tibor Nagy",
-                    "email": "tibornagy77@gmail.com"
+                    "name": "XFRAME",
+                    "email": "support@xenonmc.xyz"
                 }
             ],
-            "description": "My first packagist package",
+            "description": "Default Router for XFRAME",
             "support": {
-                "issues": "https://github.com/XENONMC-DEV/mvc-library/issues",
-                "source": "https://github.com/XENONMC-DEV/mvc-library/tree/main"
+                "issues": "https://github.com/XENONMC-DEV/XFRAME-ROUTER/issues",
+                "source": "https://github.com/XENONMC-DEV/XFRAME-ROUTER/tree/main"
             },
-            "time": "2021-02-18T19:47:34+00:00"
+            "time": "2021-02-21T20:54:37+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "xenframe/mvc-library": 20
+        "xframe/router": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -9,14 +9,14 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
     public static $prefixLengthsPsr4 = array (
         'x' => 
         array (
-            'xenframe\\MvcLibrary\\' => 20,
+            'xframe\\Router\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'xenframe\\MvcLibrary\\' => 
+        'xframe\\Router\\' => 
         array (
-            0 => __DIR__ . '/..' . '/xenframe/mvc-library/src',
+            0 => __DIR__ . '/..' . '/xframe/router/src',
         ),
     );
 
