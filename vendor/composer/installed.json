@@ -43,50 +43,6 @@
                 "source": "https://github.com/XENONMC-DEV/mvc-library/tree/main"
             },
             "install-path": "../xenframe/mvc-library"
-        },
-        {
-            "name": "xenframe/router-library",
-            "version": "dev-main",
-            "version_normalized": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/XENONMC-DEV/router-library.git",
-                "reference": "7b423f41d7e6bea9980b4337b34a240981f645be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/router-library/zipball/7b423f41d7e6bea9980b4337b34a240981f645be",
-                "reference": "7b423f41d7e6bea9980b4337b34a240981f645be",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.0"
-            },
-            "time": "2021-02-18T20:00:52+00:00",
-            "default-branch": true,
-            "type": "package",
-            "installation-source": "source",
-            "autoload": {
-                "psr-4": {
-                    "xenframe\\RouterLibrary\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "XENONMC DEV",
-                    "email": "support@xenonmc.xyz"
-                }
-            ],
-            "description": "PHP Routing Library",
-            "support": {
-                "issues": "https://github.com/XENONMC-DEV/router-library/issues",
-                "source": "https://github.com/XENONMC-DEV/router-library/tree/main"
-            },
-            "install-path": "../xenframe/router-library"
         }
     ],
     "dev": true,

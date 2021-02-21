@@ -1,17 +1,15 @@
 {
     "name": "xenonmc/xenframe",
-    "description": "Advanced PHP Framework",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
-            "name": "XENONMC DEV",
-            "email": "suppor@xenonmc.xyz"
+            "name": "XENONMC",
+            "email": "support@xenonmc.xyz"
         }
     ],
     "minimum-stability": "dev",
     "require": {
-        "xenframe/mvc-library": "dev-main",
-        "xenframe/router-library": "dev-main"
+        "xenframe/mvc-library": "dev-main"
     }
 }

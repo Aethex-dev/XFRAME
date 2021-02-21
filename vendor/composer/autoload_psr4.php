@@ -6,6 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'xenframe\\RouterLibrary\\' => array($vendorDir . '/xenframe/router-library/src'),
     'xenframe\\MvcLibrary\\' => array($vendorDir . '/xenframe/mvc-library/src'),
 );
