@@ -10,6 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "xframe/router": "dev-main"
+        "xframe/router": "dev-main",
+        "cboden/ratchet": "dev-master"
     }
 }
