@@ -15,7 +15,7 @@
         }
     },
     "require": {
-        "xframe/router": "dev-main",
-        "cboden/ratchet": "dev-master"
+        "cboden/ratchet": "dev-master",
+        "xframe/router": "dev-main"
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9651ffcb86a95e044e35f9661b3286ef",
+    "content-hash": "f18990fa196163aca41c02ca4309a5ee",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -1203,12 +1203,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/XFRAME-ROUTER.git",
-                "reference": "5a83838c1656b70c830b593af76dd4d59ebd49c1"
+                "reference": "4852d1e36dba09bad89b06b33dd8f4ab277c7028"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-ROUTER/zipball/5a83838c1656b70c830b593af76dd4d59ebd49c1",
-                "reference": "5a83838c1656b70c830b593af76dd4d59ebd49c1",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-ROUTER/zipball/4852d1e36dba09bad89b06b33dd8f4ab277c7028",
+                "reference": "4852d1e36dba09bad89b06b33dd8f4ab277c7028",
                 "shasum": ""
             },
             "require": {
@@ -1236,15 +1236,15 @@
                 "issues": "https://github.com/XENONMC-DEV/XFRAME-ROUTER/issues",
                 "source": "https://github.com/XENONMC-DEV/XFRAME-ROUTER/tree/main"
             },
-            "time": "2021-02-21T21:14:47+00:00"
+            "time": "2021-02-22T21:50:52+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "xframe/router": 20,
-        "cboden/ratchet": 20
+        "cboden/ratchet": 20,
+        "xframe/router": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
