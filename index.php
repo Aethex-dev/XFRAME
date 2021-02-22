@@ -1,14 +1,26 @@
-<?php
+<html>
+    <head>
+        <style>
+            input, button { padding: 10px; }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="message" />
+        <button onclick="transmitMessage()">Send</button>
+        <script>
+            // Create a new WebSocket.
+            var socket  = new WebSocket('ws://localhost:8000/');
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+            // Define the 
+            var message = document.getElementById('message');
 
-$root = str_replace('\\', '/', __DIR__);
+            function transmitMessage() {
+                socket.send( message.value );
+            }
 
-// setup composer autoloader
-require_once $root . '/vendor/autoload.php';
-
-use xenframe\MvcLibrary\Hello;
-
-$comp = new Hello();
+            socket.onmessage = function(e) {
+                alert( e.data );
+            }
+        </script>
+    </body>
+</html>
