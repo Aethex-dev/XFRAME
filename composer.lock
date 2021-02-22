@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/XFRAME-ROUTER.git",
-                "reference": "13305bcec4938708d6edadbcb86c2db1e1162a37"
+                "reference": "5a83838c1656b70c830b593af76dd4d59ebd49c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-ROUTER/zipball/13305bcec4938708d6edadbcb86c2db1e1162a37",
-                "reference": "13305bcec4938708d6edadbcb86c2db1e1162a37",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-ROUTER/zipball/5a83838c1656b70c830b593af76dd4d59ebd49c1",
+                "reference": "5a83838c1656b70c830b593af76dd4d59ebd49c1",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "issues": "https://github.com/XENONMC-DEV/XFRAME-ROUTER/issues",
                 "source": "https://github.com/XENONMC-DEV/XFRAME-ROUTER/tree/main"
             },
-            "time": "2021-02-21T20:54:37+00:00"
+            "time": "2021-02-21T21:14:47+00:00"
         }
     ],
     "packages-dev": [],
