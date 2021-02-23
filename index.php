@@ -40,7 +40,7 @@ class xframe {
      * 
     */
 
-    private router $router;
+    private $router;
 
     /** 
      * model object
@@ -87,39 +87,23 @@ class xframe {
     function main() {
 
         // setup router
-        $router = new \xframe\Router\App();
+        $this->router = new \xframe\Router\App();
 
-        dumpf($router->get_url());
+        dumpf($this->router->get_url());
 
-        echo $router->get_request_app();
+        echo $this->router->get_request_app();
 
-        echo $router->get_request_action();
+        echo $this->router->get_request_action();
 
-        dumpf($router->get_app_config('About'));
+        dumpf($this->router->get_app_config('About'));
 
-        $router->get_all_apps();
+        $this->router->get_all_apps();
 
         // initialize router
 
-        $conn = new \mysqli("localhost", "root", "", "xframe");
+        $db = new \xframe\Database\App();
 
-        if($stmt = $conn->prepare("INSERT INTO xe_theme_templates (filename, content, lastedit) VALUES (?, ?, ?)")) {
-
-            $var = "test";
-
-            $varr = "test";
-
-            $varrr = "test";
-
-        $stmt->bind_param("sss", $var, $varr, $varrr);
-
-        $stmt->execute();
-
-        } else {
-
-echo "query erro";
-
-        }
+        $db->select();
 
     }
 

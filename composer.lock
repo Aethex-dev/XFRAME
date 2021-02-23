@@ -1300,12 +1300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/XFRAME-DATABASE.git",
-                "reference": "5844a26d1476028f3ff089a2e755c0b382f12c2c"
+                "reference": "94680a883ca12eb4fca6eb0ebc0dcc21276a44ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-DATABASE/zipball/5844a26d1476028f3ff089a2e755c0b382f12c2c",
-                "reference": "5844a26d1476028f3ff089a2e755c0b382f12c2c",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-DATABASE/zipball/94680a883ca12eb4fca6eb0ebc0dcc21276a44ab",
+                "reference": "94680a883ca12eb4fca6eb0ebc0dcc21276a44ab",
                 "shasum": ""
             },
             "require": {
@@ -1333,7 +1333,7 @@
                 "issues": "https://github.com/XENONMC-DEV/XFRAME-DATABASE/issues",
                 "source": "https://github.com/XENONMC-DEV/XFRAME-DATABASE/tree/main"
             },
-            "time": "2021-02-23T21:39:19+00:00"
+            "time": "2021-02-23T22:00:31+00:00"
         },
         {
             "name": "xframe/mvc",
