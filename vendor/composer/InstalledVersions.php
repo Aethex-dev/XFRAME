@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '522d05df8cea96e5afc54e74def81b70a2cc8e99',
+    'reference' => 'c2c28b1d27c29f9c8070095cd8fb3ecd4cf971eb',
     'name' => 'xenonmc/xframe',
   ),
   'versions' => 
@@ -228,7 +228,7 @@ private static $installed = array (
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'b34b6b9ebe8e40b9fc0bf5bb60a69f3b9ba7eba0',
+      'reference' => '45fca28ff2e0288a5849ba44ee300ed08c1bc4f3',
     ),
     'xenonmc/xframe' => 
     array (
@@ -237,7 +237,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '522d05df8cea96e5afc54e74def81b70a2cc8e99',
+      'reference' => 'c2c28b1d27c29f9c8070095cd8fb3ecd4cf971eb',
     ),
     'xframe/database' => 
     array (
@@ -247,7 +247,7 @@ private static $installed = array (
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '11705884393c5987569b668008cbd5fdf2a4acd9',
+      'reference' => '5844a26d1476028f3ff089a2e755c0b382f12c2c',
     ),
     'xframe/mvc' => 
     array (
@@ -267,7 +267,7 @@ private static $installed = array (
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'c4c6a7d7d98d4b651cb9df2ac0cbba23d9ce947f',
+      'reference' => 'b296fbb449623028a070777703a9c8efd8b85b10',
     ),
   ),
 );

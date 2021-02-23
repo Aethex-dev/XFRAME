@@ -1261,12 +1261,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "b34b6b9ebe8e40b9fc0bf5bb60a69f3b9ba7eba0"
+                "reference": "45fca28ff2e0288a5849ba44ee300ed08c1bc4f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/b34b6b9ebe8e40b9fc0bf5bb60a69f3b9ba7eba0",
-                "reference": "b34b6b9ebe8e40b9fc0bf5bb60a69f3b9ba7eba0",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/45fca28ff2e0288a5849ba44ee300ed08c1bc4f3",
+                "reference": "45fca28ff2e0288a5849ba44ee300ed08c1bc4f3",
                 "shasum": ""
             },
             "require": {
@@ -1295,7 +1295,7 @@
                 "symfony/http-foundation": "For using a Symfony Request object",
                 "symfony/yaml": "For using the YAML loader"
             },
-            "time": "2021-02-19T07:25:52+00:00",
+            "time": "2021-02-23T10:10:15+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "source",
@@ -1355,18 +1355,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/XFRAME-DATABASE.git",
-                "reference": "11705884393c5987569b668008cbd5fdf2a4acd9"
+                "reference": "5844a26d1476028f3ff089a2e755c0b382f12c2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-DATABASE/zipball/11705884393c5987569b668008cbd5fdf2a4acd9",
-                "reference": "11705884393c5987569b668008cbd5fdf2a4acd9",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-DATABASE/zipball/5844a26d1476028f3ff089a2e755c0b382f12c2c",
+                "reference": "5844a26d1476028f3ff089a2e755c0b382f12c2c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0.0"
             },
-            "time": "2021-02-23T21:33:18+00:00",
+            "time": "2021-02-23T21:39:19+00:00",
             "default-branch": true,
             "type": "package",
             "installation-source": "source",
@@ -1443,18 +1443,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/XFRAME-ROUTER.git",
-                "reference": "c4c6a7d7d98d4b651cb9df2ac0cbba23d9ce947f"
+                "reference": "b296fbb449623028a070777703a9c8efd8b85b10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-ROUTER/zipball/c4c6a7d7d98d4b651cb9df2ac0cbba23d9ce947f",
-                "reference": "c4c6a7d7d98d4b651cb9df2ac0cbba23d9ce947f",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-ROUTER/zipball/b296fbb449623028a070777703a9c8efd8b85b10",
+                "reference": "b296fbb449623028a070777703a9c8efd8b85b10",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0.0"
             },
-            "time": "2021-02-23T05:09:24+00:00",
+            "time": "2021-02-23T17:30:44+00:00",
             "default-branch": true,
             "type": "package",
             "installation-source": "source",

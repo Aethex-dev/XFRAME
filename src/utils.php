@@ -31,3 +31,16 @@ function cout($text) {
     echo 'console.log(' . $text . ');';
     echo '</script>';
 }
+
+/** 
+ * display a formated error
+ * 
+ * @param string, error text
+ * 
+*/
+
+function error($text) {
+
+    echo "<p style = 'font-family: sans-serif; font-size: 13px;'><strong><i>ERROR: " . $text . "</i></strong></p>";
+    
+}
