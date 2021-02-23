@@ -1,15 +1,10 @@
 <?php
 
-// dump variable formatted
-function dumpf($var = "undefined") {
+// set app variables
+$root = str_replace('\\', '/', __DIR__);
 
-    echo "<!-- variable dump -->\n <pre>";
-
-    var_dump($var);
-
-    echo "</pre>\n <!-- end variable dump --> ";
-
-}
+// include utility functions
+require_once($root . '/src/utils.php');
 
 include 'vendor/autoload.php';
 
