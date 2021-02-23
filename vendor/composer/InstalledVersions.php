@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '90a51b5da095244c7c5cd05155079541cc85b0e7',
+    'reference' => 'dafe4b899a7f7c28bd42090737973b2d1391a67b',
     'name' => 'xenonmc/xframe',
   ),
   'versions' => 
@@ -228,7 +228,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '90a51b5da095244c7c5cd05155079541cc85b0e7',
+      'reference' => 'dafe4b899a7f7c28bd42090737973b2d1391a67b',
     ),
     'xframe/router' => 
     array (

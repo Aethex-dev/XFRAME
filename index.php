@@ -51,6 +51,8 @@ class xframe {
         dumpf($router->get_url());
 
         echo $router->get_request_app();
+
+        echo $router->get_request_action();
         
     }
 
