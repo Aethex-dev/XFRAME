@@ -35,7 +35,7 @@ class App {
      * 
     */
 
-    function get_request_app($home_app = 'index') {
+    function get_request_app($home_app = 'Index') {
 
         $url = $this->get_url();
 
@@ -76,14 +76,16 @@ class App {
     function get_all_apps() {
 
         $apps = scandir(str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']) . '/src/apps/', 1);
-        var_dump($apps);
+
         for($x = 0; $x <= 1; $x++) {
-            $apps = array_pop($apps);
+            unset($apps[count($apps)-1]);
         }
 
-        foreach($apps as $app) {
-            echo $app;
+        for($app = 0; $app <= count($apps) - 1; $app++) {
+            $output = $apps[$app];
         }
+
+        return $output;
 
     }
 
