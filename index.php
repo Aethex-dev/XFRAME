@@ -17,18 +17,24 @@ namespace xframe\framework;
 
 class xframe {
 
-    /** 
-     * constructor
-     * 
-    */
+    function __construct($use_testing = false) {
 
-    function __construct($use_testing) {
+        $root = str_replace('\\', '/', __DIR__);
+
+        // require utils
+        require_once $root . '/src/utils.php';
+
+        // require composer
+        require_once $root . '/vendor/autoload.php';
+
+        // start framework classes
         if($use_testing == true) {
             $this->testing();
             return 0;
         } else {
             $this->main();
         }
+
     }
 
     /** 
@@ -38,6 +44,11 @@ class xframe {
 
     function main() {
 
+        // setup url
+        $router = new \xframe\Router\App();
+
+        dumpf($router->get_url());
+        
     }
 
     /** 
@@ -51,14 +62,9 @@ class xframe {
 
 }
 
-// set app variables
-$root = str_replace('\\', '/', __DIR__);
+/** 
+ * execute framework
+ * 
+*/
 
-// include utility functions
-require_once($root . '/src/utils.php');
-
-include 'vendor/autoload.php';
-
-use xframe\Router\App;
-
-$url = new App();
+$xframe = new xframe(false);
