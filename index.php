@@ -53,6 +53,10 @@ class xframe {
         echo $router->get_request_app();
 
         echo $router->get_request_action();
+
+        dumpf($router->get_app_config('About'));
+
+        $router->get_all_apps();
         
     }
 
