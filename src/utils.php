@@ -14,9 +14,9 @@
 */
 
 function dumpf($var = "undefined") {
-    echo '<!-- variable dump -->\n <pre>';
+    echo "<!-- variable dump -->\n <pre>";
     var_dump($var);
-    echo '</pre>\n <!-- end variable dump -->';
+    echo "</pre>\n <!-- end variable dump -->";
 }
 
 /** 

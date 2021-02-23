@@ -52,6 +52,10 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
         array (
             'MyApp\\' => 6,
         ),
+        'H' => 
+        array (
+            'Hhxsv5\\SSE\\' => 11,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -126,6 +130,10 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
         'MyApp\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Hhxsv5\\SSE\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hhxsv5/php-sse/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

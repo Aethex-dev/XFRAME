@@ -22,7 +22,7 @@ if($config['ignore-php-version'] !== true) {
 }
 
 // require composer
-require_once $root . '/vendor/autoload.php';
+require_once str_replace('\\', '/', __DIR__) . '/vendor/autoload.php';
 
 /** 
  * framework class
@@ -63,10 +63,8 @@ class xframe {
 
     function __construct($use_testing) {
 
-        $root = str_replace('\\', '/', __DIR__);
-
         // require utils
-        require_once $root . '/src/utils.php';
+        require_once str_replace('\\', '/', __DIR__) . '/src/utils.php';
 
         // start framework classes
         if($use_testing === true) {

@@ -17,6 +17,7 @@
     "require": {
         "cboden/ratchet": "dev-master",
         "hbattat/verifyemail": "dev-master",
-        "xframe/router": "dev-main"
+        "xframe/router": "dev-main",
+        "hhxsv5/php-sse": "~2.0"
     }
 }

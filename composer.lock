@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e42aa360d6cd546136b834494b40c0e2",
+    "content-hash": "c56fecb6d4be64519410935fded7f62c",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -234,6 +234,59 @@
                 "source": "https://github.com/hbattat/verifyEmail/tree/master"
             },
             "time": "2018-06-02T20:23:34+00:00"
+        },
+        {
+            "name": "hhxsv5/php-sse",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hhxsv5/php-sse.git",
+                "reference": "5aee564f273427e1740d29ecf1af8930919c387f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hhxsv5/php-sse/zipball/5aee564f273427e1740d29ecf1af8930919c387f",
+                "reference": "5aee564f273427e1740d29ecf1af8930919c387f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0",
+                "swoole/ide-helper": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hhxsv5\\SSE\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Xie Biao",
+                    "email": "hhxsv5@sina.com"
+                }
+            ],
+            "description": "A simple and efficient library implemented HTML5's server-sent events by PHP, is used to real-time push events from server to client, and easier than Websocket, instead of AJAX request.",
+            "homepage": "https://github.com/hhxsv5/php-sse",
+            "keywords": [
+                "Server-Sent Events",
+                "event-stream",
+                "events",
+                "eventsource",
+                "sever-events",
+                "sse"
+            ],
+            "support": {
+                "issues": "https://github.com/hhxsv5/php-sse/issues",
+                "source": "https://github.com/hhxsv5/php-sse/tree/v2.0.1"
+            },
+            "time": "2020-08-20T09:10:37+00:00"
         },
         {
             "name": "psr/http-message",

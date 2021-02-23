@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'dafe4b899a7f7c28bd42090737973b2d1391a67b',
+    'reference' => '78065e86d1e53cefe259f99802bf1ae891076d67',
     'name' => 'xenonmc/xframe',
   ),
   'versions' => 
@@ -72,6 +72,15 @@ private static $installed = array (
         0 => '9999999-dev',
       ),
       'reference' => '347fec4943ac69ddfa3f20113998874d7c17e154',
+    ),
+    'hhxsv5/php-sse' => 
+    array (
+      'pretty_version' => 'v2.0.1',
+      'version' => '2.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5aee564f273427e1740d29ecf1af8930919c387f',
     ),
     'psr/http-message' => 
     array (
@@ -228,7 +237,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'dafe4b899a7f7c28bd42090737973b2d1391a67b',
+      'reference' => '78065e86d1e53cefe259f99802bf1ae891076d67',
     ),
     'xframe/router' => 
     array (

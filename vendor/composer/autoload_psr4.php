@@ -23,5 +23,6 @@ return array(
     'Ratchet\\' => array($vendorDir . '/cboden/ratchet/src/Ratchet'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'MyApp\\' => array($baseDir . '/src'),
+    'Hhxsv5\\SSE\\' => array($vendorDir . '/hhxsv5/php-sse/src'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
 );
