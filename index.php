@@ -21,18 +21,45 @@ if($config['ignore-php-version'] !== true) {
     }
 }
 
-// test case
-$br = get_browser(null, true);
-echo $br['cookies'];
+// require composer
+require_once $root . '/vendor/autoload.php';
 
 /** 
  * framework class
  * 
- * @param bool, use testing class or main class. true = testing, false = main
+ * @param bool, use testing class
  * 
 */
 
 class xframe {
+
+    /** 
+     * router object
+     * 
+    */
+
+    private router $router;
+
+    /** 
+     * model object
+     * 
+    */
+
+    private $model;
+
+    /** 
+     * controller object
+     * 
+    */
+
+    private $controller;
+
+    /** 
+     * view object
+     * 
+    */
+
+    private $view;
 
     function __construct($use_testing) {
 
@@ -40,9 +67,6 @@ class xframe {
 
         // require utils
         require_once $root . '/src/utils.php';
-
-        // require composer
-        require_once $root . '/vendor/autoload.php';
 
         // start framework classes
         if($use_testing === true) {
@@ -74,6 +98,8 @@ class xframe {
         dumpf($router->get_app_config('About'));
 
         $router->get_all_apps();
+
+        // initialize router
         
     }
 
