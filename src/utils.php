@@ -9,16 +9,33 @@
 /** 
  * dump formatted variable as json
  * 
- * @param array or variable to convert to json and render in a formatted layout
+ * @param array/string, convert to json and render in a formatted layout
  * 
 */
 
 function dumpf($var = "undefined") {
 
-    echo "<!-- variable dump -->\n <pre>";
+    echo '<!-- variable dump -->\n <pre>';
 
     var_dump($var);
 
-    echo "</pre>\n <!-- end variable dump --> ";
+    echo '</pre>\n <!-- end variable dump -->';
+
+}
+
+/** 
+ * log to the browsers console
+ * 
+ * @param string, the text you want to log to the console
+ * 
+*/
+
+function cout($text) {
+
+    echo '<script>';
+
+    echo 'console.log(' . $text . ');';
+
+    echo '</script>';
 
 }
