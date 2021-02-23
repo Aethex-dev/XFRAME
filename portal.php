@@ -1,5 +1,11 @@
 <?php
 
+/** 
+ * FILENAME: portal.php
+ * DESCRIPTION: routes user to public index page
+ * AUTHORS: XENONMC XFRAME
+*/
+
 // set app variables
 $root = str_replace('\\', '/', __DIR__);
 
