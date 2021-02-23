@@ -21,6 +21,7 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
         array (
             'xframe\\Router\\' => 14,
             'xframe\\Mvc\\' => 11,
+            'xframe\\Database\\' => 16,
         ),
         'h' => 
         array (
@@ -71,6 +72,10 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
         'xframe\\Mvc\\' => 
         array (
             0 => __DIR__ . '/..' . '/xframe/mvc/src',
+        ),
+        'xframe\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xframe/database/src',
         ),
         'hbattat\\' => 
         array (

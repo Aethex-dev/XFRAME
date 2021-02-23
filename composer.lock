@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f25fe6848480497f223df573a76a2ae",
+    "content-hash": "c940792ec8651c2674b3a7bca950d103",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -1295,6 +1295,47 @@
             "time": "2021-02-19T07:25:52+00:00"
         },
         {
+            "name": "xframe/database",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XFRAME-DATABASE.git",
+                "reference": "11705884393c5987569b668008cbd5fdf2a4acd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-DATABASE/zipball/11705884393c5987569b668008cbd5fdf2a4acd9",
+                "reference": "11705884393c5987569b668008cbd5fdf2a4acd9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "xframe\\Database\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XFRAME",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "description": "Database manager for XFRAME",
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XFRAME-DATABASE/issues",
+                "source": "https://github.com/XENONMC-DEV/XFRAME-DATABASE/tree/main"
+            },
+            "time": "2021-02-23T21:33:18+00:00"
+        },
+        {
             "name": "xframe/mvc",
             "version": "dev-main",
             "source": {
@@ -1384,7 +1425,8 @@
         "cboden/ratchet": 20,
         "hbattat/verifyemail": 20,
         "xframe/router": 20,
-        "xframe/mvc": 20
+        "xframe/mvc": 20,
+        "xframe/database": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

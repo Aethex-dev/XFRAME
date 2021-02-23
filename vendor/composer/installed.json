@@ -1349,6 +1349,50 @@
             "install-path": "../../../XFRAME/vendor/symfony/routing"
         },
         {
+            "name": "xframe/database",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XFRAME-DATABASE.git",
+                "reference": "11705884393c5987569b668008cbd5fdf2a4acd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-DATABASE/zipball/11705884393c5987569b668008cbd5fdf2a4acd9",
+                "reference": "11705884393c5987569b668008cbd5fdf2a4acd9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "time": "2021-02-23T21:33:18+00:00",
+            "default-branch": true,
+            "type": "package",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "xframe\\Database\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XFRAME",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "description": "Database manager for XFRAME",
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XFRAME-DATABASE/issues",
+                "source": "https://github.com/XENONMC-DEV/XFRAME-DATABASE/tree/main"
+            },
+            "install-path": "../../../XFRAME/vendor/xframe/database"
+        },
+        {
             "name": "xframe/mvc",
             "version": "dev-main",
             "version_normalized": "dev-main",

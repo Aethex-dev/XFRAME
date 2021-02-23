@@ -21,6 +21,8 @@ if($config['ignore-php-version'] !== true) {
     }
 }
 
+$root = str_replace('\\', '/', __DIR__);
+
 // require composer
 require_once str_replace('\\', '/', __DIR__) . '/vendor/autoload.php';
 
@@ -98,7 +100,27 @@ class xframe {
         $router->get_all_apps();
 
         // initialize router
-        
+
+        $conn = new \mysqli("localhost", "root", "", "xframe");
+
+        if($stmt = $conn->prepare("INSERT INTO xe_theme_templates (filename, content, lastedit) VALUES (?, ?, ?)")) {
+
+            $var = "test";
+
+            $varr = "test";
+
+            $varrr = "test";
+
+        $stmt->bind_param("sss", $var, $varr, $varrr);
+
+        $stmt->execute();
+
+        } else {
+
+echo "query erro";
+
+        }
+
     }
 
     /** 
