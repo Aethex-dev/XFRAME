@@ -1,26 +1,20 @@
-<html>
-    <head>
-        <style>
-            input, button { padding: 10px; }
-        </style>
-    </head>
-    <body>
-        <input type="text" id="message" />
-        <button onclick="transmitMessage()">Send</button>
-        <script>
-            // Create a new WebSocket.
-            var socket  = new WebSocket('ws://localhost:8000/');
+<?php
 
-            // Define the 
-            var message = document.getElementById('message');
+// dump variable formatted
+function dumpf($var = "undefined") {
 
-            function transmitMessage() {
-                socket.send( message.value );
-            }
+    echo "<!-- variable dump -->\n <pre>";
 
-            socket.onmessage = function(e) {
-                alert( e.data );
-            }
-        </script>
-    </body>
-</html>
+    var_dump($var);
+
+    echo "</pre>\n <!-- end variable dump --> ";
+
+}
+
+include 'vendor/autoload.php';
+
+use xframe\Router\App;
+
+$url = new App();
+
+dumpf($url->get_url());
