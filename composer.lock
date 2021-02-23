@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c56fecb6d4be64519410935fded7f62c",
+    "content-hash": "0f25fe6848480497f223df573a76a2ae",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -1295,6 +1295,47 @@
             "time": "2021-02-19T07:25:52+00:00"
         },
         {
+            "name": "xframe/mvc",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XFRAME-MVC.git",
+                "reference": "dcf242e50a45092cbe377246d392f86ebee98933"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-MVC/zipball/dcf242e50a45092cbe377246d392f86ebee98933",
+                "reference": "dcf242e50a45092cbe377246d392f86ebee98933",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "xframe\\Mvc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XFRAME",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "description": "Default MVC manager for XFRAME",
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XFRAME-MVC/issues",
+                "source": "https://github.com/XENONMC-DEV/XFRAME-MVC/tree/main"
+            },
+            "time": "2021-02-22T13:53:52+00:00"
+        },
+        {
             "name": "xframe/router",
             "version": "dev-main",
             "source": {
@@ -1342,7 +1383,8 @@
     "stability-flags": {
         "cboden/ratchet": 20,
         "hbattat/verifyemail": 20,
-        "xframe/router": 20
+        "xframe/router": 20,
+        "xframe/mvc": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

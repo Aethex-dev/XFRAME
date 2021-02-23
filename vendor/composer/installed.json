@@ -1349,6 +1349,50 @@
             "install-path": "../../../XFRAME/vendor/symfony/routing"
         },
         {
+            "name": "xframe/mvc",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XFRAME-MVC.git",
+                "reference": "dcf242e50a45092cbe377246d392f86ebee98933"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-MVC/zipball/dcf242e50a45092cbe377246d392f86ebee98933",
+                "reference": "dcf242e50a45092cbe377246d392f86ebee98933",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "time": "2021-02-22T13:53:52+00:00",
+            "default-branch": true,
+            "type": "package",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "xframe\\Mvc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XFRAME",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "description": "Default MVC manager for XFRAME",
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XFRAME-MVC/issues",
+                "source": "https://github.com/XENONMC-DEV/XFRAME-MVC/tree/main"
+            },
+            "install-path": "../../../XFRAME/vendor/xframe/mvc"
+        },
+        {
             "name": "xframe/router",
             "version": "dev-main",
             "version_normalized": "dev-main",
