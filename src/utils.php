@@ -14,13 +14,9 @@
 */
 
 function dumpf($var = "undefined") {
-
     echo '<!-- variable dump -->\n <pre>';
-
     var_dump($var);
-
     echo '</pre>\n <!-- end variable dump -->';
-
 }
 
 /** 
@@ -31,11 +27,7 @@ function dumpf($var = "undefined") {
 */
 
 function cout($text) {
-
     echo '<script>';
-
     echo 'console.log(' . $text . ');';
-
     echo '</script>';
-
 }

@@ -21,6 +21,10 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
         array (
             'xframe\\Router\\' => 14,
         ),
+        'h' => 
+        array (
+            'hbattat\\' => 8,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -58,6 +62,10 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
         'xframe\\Router\\' => 
         array (
             0 => __DIR__ . '/..' . '/xframe/router/src',
+        ),
+        'hbattat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hbattat/verifyemail/src',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (

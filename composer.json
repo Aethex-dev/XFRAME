@@ -16,6 +16,7 @@
     },
     "require": {
         "cboden/ratchet": "dev-master",
-        "xframe/router": "dev-main"
+        "xframe/router": "dev-main",
+        "hbattat/verifyemail": "dev-master"
     }
 }

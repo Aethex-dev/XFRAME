@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f18990fa196163aca41c02ca4309a5ee",
+    "content-hash": "0887c1b1629ef6b306b80eb97f6581e2",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -190,6 +190,50 @@
                 "source": "https://github.com/guzzle/psr7/tree/1.x"
             },
             "time": "2020-12-08T11:45:39+00:00"
+        },
+        {
+            "name": "hbattat/verifyemail",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hbattat/verifyEmail.git",
+                "reference": "347fec4943ac69ddfa3f20113998874d7c17e154"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hbattat/verifyEmail/zipball/347fec4943ac69ddfa3f20113998874d7c17e154",
+                "reference": "347fec4943ac69ddfa3f20113998874d7c17e154",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.27"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "hbattat\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Battat",
+                    "email": "hbattat@msn.com"
+                }
+            ],
+            "description": "PHP class that can be easily used to verify an email address and make sure it is valid and does exist on the mail server.",
+            "support": {
+                "issues": "https://github.com/hbattat/verifyEmail/issues",
+                "source": "https://github.com/hbattat/verifyEmail/tree/master"
+            },
+            "time": "2018-06-02T20:23:34+00:00"
         },
         {
             "name": "psr/http-message",
@@ -1244,7 +1288,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "cboden/ratchet": 20,
-        "xframe/router": 20
+        "xframe/router": 20,
+        "hbattat/verifyemail": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
