@@ -67,6 +67,25 @@ class App {
     }
 
     /** 
+     * check if the action exists
+     * 
+     * @param string, name of the action
+     * 
+     * @return bool, return if the action name exists
+     * 
+    */
+
+    function action_exists($action) {
+
+        if(file_exists(str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'])) . '/src/apps/' . $this->get_request_app() . '/controllers/' . $action . '.php') {
+            return true;
+        }
+
+        return false;
+
+    }
+
+    /** 
      * get all applications
      * 
      * @return array, array of all the applications

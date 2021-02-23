@@ -1,0 +1,5 @@
+{
+    "developer-mode": false,
+    "default-config": "config.default.json",
+    "ignore-php-version": false
+}
