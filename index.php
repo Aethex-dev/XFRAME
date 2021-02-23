@@ -31,9 +31,10 @@ class xframe {
         if($use_testing == true) {
             $this->testing();
             return 0;
-        } else {
-            $this->main();
         }
+        
+        $this->main();
+        return 0;
 
     }
 
@@ -44,7 +45,7 @@ class xframe {
 
     function main() {
 
-        // setup url
+        // setup router
         $router = new \xframe\Router\App();
 
         dumpf($router->get_url());
