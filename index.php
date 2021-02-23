@@ -49,6 +49,8 @@ class xframe {
         $router = new \xframe\Router\App();
 
         dumpf($router->get_url());
+
+        echo $router->get_request_app();
         
     }
 
