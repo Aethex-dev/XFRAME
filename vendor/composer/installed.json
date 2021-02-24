@@ -1355,18 +1355,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/XENONMC-DEV/XFRAME-DATABASE.git",
-                "reference": "94680a883ca12eb4fca6eb0ebc0dcc21276a44ab"
+                "reference": "4b2a8d832588067842f4ed142e30d4417506982e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-DATABASE/zipball/94680a883ca12eb4fca6eb0ebc0dcc21276a44ab",
-                "reference": "94680a883ca12eb4fca6eb0ebc0dcc21276a44ab",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-DATABASE/zipball/4b2a8d832588067842f4ed142e30d4417506982e",
+                "reference": "4b2a8d832588067842f4ed142e30d4417506982e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0.0"
             },
-            "time": "2021-02-23T22:00:31+00:00",
+            "time": "2021-02-24T00:02:11+00:00",
             "default-branch": true,
             "type": "package",
             "installation-source": "source",
