@@ -24,7 +24,7 @@ Next, you need to run the installer, you have multiple ways of doing so, the mos
 PLEASE NOTE, when using this framework, do **NOT** edit the index.php file in the root of the framework, instead, go to the public folder inside and edit that index.php,
 the public folder is the one specificly for your project.
 
-###### Simple error handling
+### Simple error handling
 
 This framework has multiple ways of displaying formated errors,
 
@@ -47,5 +47,17 @@ this outputs
 FATAL ERROR: Hello world, this is a fatal error
 ```
 
+### Simple AJAX
+
+This framework also has AJAX support,
+
+First, lets detect an AJAX message. When an AJAX request is sent, XFRAME will detect it an call a callback function, 
+```
+function onMessage() {
+
+ // code to run once an AJAX call is sent
+
+}
+```
 ## Simple Blog site
 ###### Coming Soon
