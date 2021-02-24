@@ -2,6 +2,10 @@
 
 namespace xframe\framework;
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 /** 
  * FILENAME: portal.php
  * DESCRIPTION: routes user to public index page
@@ -103,7 +107,7 @@ class xframe {
 
         $db = new \xframe\Database\App();
 
-        $db->select()->compile();
+        $db->select()->table("tab")->column("columnsssss")->where("???????")->compile();
 
     }
 
