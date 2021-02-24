@@ -52,12 +52,29 @@ FATAL ERROR: Hello world, this is a fatal error
 This framework also has AJAX support,
 
 First, lets detect an AJAX message. When an AJAX request is sent, XFRAME will detect it an call a callback function, 
-```
+```php
 function onMessage() {
 
  // code to run once an AJAX call is sent
 
 }
 ```
+
+you can also assign ids of the AJAX calls to find out which part of your page called it, for example a search query
+```php
+function onMessage() {
+
+    if(messageID() == "search_query") {
+
+        echo "A search query was performed";
+
+    }
+
+}
+```
+
+The above method works but we have a problem, a you can see, we are echoing the result and that means we cant change where it outputs, we could use JavaScript to output in a formated way, but thats not such a good idea as that means we have to echo js code in our php app meaning we mix code. 
+
+So solve this, we can output json instead
 ## Simple Blog site
 ###### Coming Soon
