@@ -22,7 +22,7 @@ Next, upload the installer to your webserver where you want the framework access
 
 Next, you need to run the installer, you have multiple ways of doing so, the most recommended way of doign it is to navigate to where you uploaded your installer fro the website like so, if your website is located in the folder community, then you need to access the installer like this, `https://your-website.com/community/install.php`, if your installer is in the front most folder of your website, then you would access it via `https://your-website.com/install.php`. One you navgiate to that file, the installer will promt you be confirm installation as the installer will overwrite any files with the same name or directorys, it will also give you the list of files and folders that it may overwrite. Now just follow the install directions and once it prompts you that the framework has been installed, you can close the webpage and return to you websites file manager
 
-### Basic Usage
+## Basic Usage
 
-### Simple Blog site
+## Simple Blog site
 ###### Coming Soon
