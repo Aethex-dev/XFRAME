@@ -103,7 +103,7 @@ class xframe {
 
         $db = new \xframe\Database\App();
 
-        $db->select();
+        $db->select()->compile();
 
     }
 
