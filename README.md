@@ -20,7 +20,6 @@ Advanced PHP Framework
    - `composer require xenonmc/xframe`
 2. Install `PHP 8.0.2`
 
-
 ## Basic Usage
 
 PLEASE NOTE, when using this framework, do **NOT** edit the index.php file in the root of the framework, instead, go to the public folder inside and edit that index.php; the public folder is the one needed for your project.
@@ -29,16 +28,18 @@ PLEASE NOTE, when using this framework, do **NOT** edit the index.php file in th
 
 This framework has multiple ways of displaying formatted errors,
 
-First, let's display a simple error,
+First, let's display an error,
 
 ```php
-error("Hello world, I am an error");
+error("Warning: fopen(mytestfile.txt) [function.fopen]: failed to open stream:
+No such file or directory in C:\webfolder\test.php on line 2");
 ```
 
 this outputs
 
 ```text
-ERROR: Hello world, I am an error
+Warning: fopen(mytestfile.txt) [function.fopen]: failed to open stream:
+No such file or directory in C:\webfolder\test.php on line 2
 ```
 
 We can also make the error fatal by entering true as the functions second parameter
