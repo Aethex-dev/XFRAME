@@ -122,9 +122,9 @@ class xframe {
 
         // initialize router
                                                                                 
-        $this->db = new \xframe\Database\App();
+        $db = new \xframe\Database\App();
 
-        $this->db->connect(array(
+        $db->connect(array(
 
             'host' => 'localhost',
             'username' => 'root',
@@ -134,7 +134,6 @@ class xframe {
             'charset' => 'utf8'
 
         ));
-        
 
     }
 
