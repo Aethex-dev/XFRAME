@@ -5,6 +5,13 @@ namespace xframe\Database;
 class App {
 
     /** 
+     * connection object 
+     * 
+    */
+
+    public $conn;
+
+    /** 
      * mysqli errors
      * 
     */
@@ -44,7 +51,7 @@ class App {
      * 
     */
 
-    function clean() {
+    private function clean() {
 
         foreach ($this as $key => $value) {
             
@@ -63,7 +70,7 @@ class App {
      * 
     */
 
-    function connect($params) {
+    function connect(array $params) {
 
         // input validation
         if(!isset($params['port'])) {
@@ -84,13 +91,9 @@ class App {
 
         }
 
-        ob_start();
-
         $this->conn = new \mysqli($params['host'], $params['username'], $params['password'], $params['database'], $params['port']);
 
-        $conn_error = ob_get_clean();
-
-        if(strlen($conn_error) > 1 || $this->conn->connect_error) {
+        if($this->conn->connect_error) {
 
             $database = $params['database'];
 
@@ -108,6 +111,8 @@ class App {
 
         }
 
+        return $this->conn;
+
     }
 
     /** 
@@ -117,7 +122,7 @@ class App {
      * 
     */
 
-    private function required($params) {
+    private function required(array $params) {
 
         foreach($params as $param) {
 
@@ -142,12 +147,10 @@ class App {
         $query = $this->query;
 
         $query = str_replace("{[table]}", $this->table, $query);
-
         $query = str_replace("{[column]}", $this->column, $query);
-
         $query = str_replace("{[where]}", $this->where, $query);
 
-        echo $query;
+        $this->query = $query;
 
     }
 
@@ -162,9 +165,31 @@ class App {
 
             case "SELECT":
 
+                if(!isset($this->where)) {
+
+                    $this->where = "?";
+
+                }
+
+                if(!isset($this->params)) {
+
+                    $this->params = "";
+
+                }
+
+                $this->required(array(
+
+                    'table',
+                    'column',
+                    'where'
+        
+                ));
+
                 $final = "SELECT {[column]} FROM {[table]} WHERE {[where]};";
 
                 $this->query = $final;
+
+                $this->query_built = true;
 
             break;
 
@@ -181,22 +206,11 @@ class App {
     /** 
      * execute query
      * 
+     * @param object, connection object to your database
+     * 
     */
 
-    function execute() {
-
-        $this->required(array(
-
-            'table'
-
-        ));
-
-        if(!isset($this->query_built)) {
-
-            error("MySQLI Database Adapter: Failed to execute query. Please make sure you create a query. Ex: SELECT, DELETE, etc...");
-            return false;
-
-        }
+    function execute(object $conn) {
 
         if(isset($this->error)) {
 
@@ -209,7 +223,17 @@ class App {
 
             case "SELECT":
 
+                // finalize query
+                $this->build();
+                $this->compile();
 
+                // execute query
+                echo $query = $this->query;
+                $stmt = $conn->prepare("SELECT filename FROM xe_theme_templates WHERE filename = ?;");
+
+                $stmt->bind_param($this->types, ...$this->params);
+
+                $stmt->execute();
 
             break;
 

@@ -13,6 +13,8 @@ trait Select {
 
     function select() {
 
+        $this->clean();
+
         $this->query_type = "SELECT";
         return $this;
 

@@ -139,7 +139,7 @@ class xframe {
 
         $db = new \xframe\Database\App();
 
-        $db->connect(array(
+        $conn = $db->connect(array(
 
             'host' => 'localhost',
             'username' => 'root',
@@ -153,7 +153,7 @@ class xframe {
         // get real index
         include $this->root . '/public/' . $this->config['app-index'];
 
-        $db->select()->execute();
+        $db->select()->column("filename")->table("xe_theme_templates")->where("filename = ?")->execute($conn);
 
     }
 

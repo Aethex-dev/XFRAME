@@ -27,8 +27,12 @@ trait clause {
 
     function column($column) {
 
-        $this->column = $column;
-        return $this;
+        if($this->query_type == "SELECT") {
+
+            $this->column = $column;
+            return $this;
+
+        }
 
     }
 
@@ -45,5 +49,10 @@ trait clause {
         return $this;
         
     }
+
+    /** 
+     * 
+     * 
+    */
 
 }
