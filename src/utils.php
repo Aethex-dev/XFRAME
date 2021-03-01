@@ -41,6 +41,6 @@ function cout($text) {
 
 function error($text) {
 
-    echo "<p style = 'font-family: sans-serif; font-size: 13px;'><strong><i>ERROR: " . $text . "</i></strong></p>";
+    echo "<p style = 'font-family: sans-serif; font-size: 13px;'><strong>ERROR: " . $text . "</strong></p>\n";
     
 }
