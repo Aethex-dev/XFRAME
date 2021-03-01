@@ -40,11 +40,6 @@ if($config['ignore-php-version'] !== true) {
 
 }
 
-$root = str_replace('\\', '/', __DIR__);
-
-// require composer
-require_once str_replace('\\', '/', __DIR__) . '/vendor/autoload.php';
-
 /** 
  * framework class
  * 
@@ -82,10 +77,33 @@ class xframe {
 
     private $view;
 
+    /** 
+     * application root
+     * 
+    */
+
+    private $root;
+
+    /** 
+     * framework configuration
+     * 
+    */
+
+    private $config;
+
     function __construct($use_testing) {
 
+        // define configuration
+        $this->config = json_decode(file_get_contents('config.json'), true);
+
+        // create root directory
+        $this->root = str_replace('\\', '/', __DIR__);
+
+        // require composer
+        require_once $this->root . '/vendor/autoload.php';
+
         // require utils
-        require_once str_replace('\\', '/', __DIR__) . '/src/utils.php';
+        require_once $this->root . '/src/utils.php';
 
         // start framework classes
         if($use_testing === true) {
@@ -107,21 +125,18 @@ class xframe {
 
     function main() {
 
-        // setup router
-        $this->router = new \xframe\Router\App();
+        // get real index
+        include $this->root . '/public/' . $this->config['app-index'];
 
-        dumpf($this->router->get_url());
+    }
 
-        echo $this->router->get_request_app();
+    /** 
+     * testing class
+     * 
+    */
 
-        echo $this->router->get_request_action();
+    function testing() {
 
-        dumpf($this->router->get_app_config('About'));
-
-        $this->router->get_all_apps();
-
-        // initialize router
-                                                                                
         $db = new \xframe\Database\App();
 
         $db->connect(array(
@@ -135,14 +150,10 @@ class xframe {
 
         ));
 
-    }
+        // get real index
+        include $this->root . '/public/' . $this->config['app-index'];
 
-    /** 
-     * testing class
-     * 
-    */
-
-    function testing() {
+        $db->select()->execute();
 
     }
 
