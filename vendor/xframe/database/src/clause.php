@@ -11,7 +11,7 @@ trait clause {
      * 
     */
 
-    function table($table) {
+    function table(string $table) {
 
         $this->table  = $table;
         return $this;
@@ -25,7 +25,7 @@ trait clause {
      * 
     */
 
-    function column($column) {
+    function column(string $column) {
 
         if($this->query_type == "SELECT") {
 
@@ -43,7 +43,7 @@ trait clause {
      * 
     */
 
-    function where($where) {
+    function where(string $where) {
 
         $this->where = $where;
         return $this;
@@ -51,8 +51,34 @@ trait clause {
     }
 
     /** 
-     * 
+     * input types
      * 
     */
+
+    function types(string $types) {
+
+        $this->types = $types;
+        return $this;
+
+    }
+
+    /** 
+     * query parameters
+     * 
+    */
+
+    function param(array $param) {
+
+        $this->param = $param;
+        return $this;
+
+    }
+
+    function params(array $param) {
+
+        $this->param = $param;
+        return $this;
+
+    }
 
 }

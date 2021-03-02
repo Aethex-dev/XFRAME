@@ -128,7 +128,7 @@ class App {
 
             if(!isset($this->$param)) {
 
-                error("MySQLi Database Adapter: Missing parameter. $param parameter is required.");
+                error("MySQLi Database Adapter: Missing parameter. [ $param ] parameter is required.");
                 $this->errors = true;
 
             }
@@ -167,13 +167,19 @@ class App {
 
                 if(!isset($this->where)) {
 
-                    $this->where = "?";
+                    $this->where = "LENGTH('$this->column') >= ?";
 
                 }
 
-                if(!isset($this->params)) {
+                if(!isset($this->param)) {
 
-                    $this->params = "";
+                    $this->param = array('0');
+
+                }
+
+                if(!isset($this->types)) {
+
+                    $this->types = "s";
 
                 }
 
@@ -181,7 +187,9 @@ class App {
 
                     'table',
                     'column',
-                    'where'
+                    'where',
+                    'types',
+                    'param'
         
                 ));
 
@@ -229,11 +237,13 @@ class App {
 
                 // execute query
                 echo $query = $this->query;
-                $stmt = $conn->prepare("SELECT filename FROM xe_theme_templates WHERE filename = ?;");
-
-                $stmt->bind_param($this->types, ...$this->params);
-
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param($this->types, ...$this->param);
                 $stmt->execute();
+
+                // bind results
+                $result =  $stmt->get_result();
+                $this->result = $result;
 
             break;
 
@@ -249,6 +259,17 @@ class App {
             break;
 
         }
+
+    }
+
+    /** 
+     * fetch records to an array
+     * 
+    */
+
+    function fetch() {
+
+        return $this->result->fetch_assoc();
 
     }
 
