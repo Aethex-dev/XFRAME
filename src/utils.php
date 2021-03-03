@@ -33,13 +33,20 @@ function cout($text) {
 }
 
 /** 
- * display a formated error
+ * display a formatted error
  * 
  * @param string, error text
  * 
 */
 
-function error($text) {
+function error($text, $isFatal = false) {
+
+    if($isFatal == true) {
+
+        die("<p style = 'font-family: sans-serif; font-size: 13px;'><strong>FATAL ERROR: " . $text . "</strong></p>\n");
+        return true;
+
+    }
 
     echo "<p style = 'font-family: sans-serif; font-size: 13px;'><strong>ERROR: " . $text . "</strong></p>\n";
     

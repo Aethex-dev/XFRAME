@@ -376,8 +376,7 @@ class App {
          * close mysqli query connection
          * 
         */
-                
-        $this->clean();
+        
         $stmt->close();
 
     }
