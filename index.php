@@ -153,6 +153,18 @@ class xframe {
         // get real index
         include $this->root . '/public/' . $this->config['app-index'];
 
+        $db
+        ->insert()
+        ->column("filename")
+        ->param(array(
+
+            bin2hex(random_bytes(6))
+
+        ))
+        ->table("xe_theme_templates")
+        ->types("s")
+        ->execute($conn);
+
         $db->select()->column("*")->table("xe_theme_templates")->execute($conn);
 
         while($row = $db->fetch()) {

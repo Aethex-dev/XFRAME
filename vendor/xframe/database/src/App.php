@@ -44,7 +44,8 @@ class App {
      * 
     */
 
-    use select;
+    use Select;
+    use Insert;
 
     /** 
      * clean all mysqli query parameters
@@ -146,9 +147,26 @@ class App {
 
         $query = $this->query;
 
+        if(isset($this->where)) {
+
+            $query = str_replace("{[where]}", $this->where, $query);
+
+        }
+
         $query = str_replace("{[table]}", $this->table, $query);
         $query = str_replace("{[column]}", $this->column, $query);
-        $query = str_replace("{[where]}", $this->where, $query);
+
+        $real_param = $this->param;
+
+        foreach ($this->param as &$value) {
+            
+            $value = '?';
+
+        }
+
+        $query = str_replace("{[param]}", implode(",", $this->param), $query);
+
+        $this->param = $real_param;
 
         $this->query = $query;
 
@@ -201,6 +219,24 @@ class App {
 
             break;
 
+            case "INSERT":
+
+                $this->required(array(
+
+                    'table',
+                    'column',
+                    'param'
+         
+                ));
+
+                $final = "INSERT INTO {[table]} ({[column]}) VALUES ({[param]})";
+
+                $this->query = $final;
+
+                $this->query_built = true;
+
+            break;
+
             default:
 
                 error("MySQLI Database Adapter: Failed to execute query. Invalid [ query_type ].");
@@ -236,7 +272,7 @@ class App {
                 $this->compile();
 
                 // execute query
-                echo $query = $this->query;
+                $query = $this->query;
                 $stmt = $conn->prepare($query);
                 $stmt->bind_param($this->types, ...$this->param);
                 $stmt->execute();
@@ -249,6 +285,16 @@ class App {
 
             case "INSERT":
 
+                // finalize query
+                $this->build();
+                $this->compile();
+
+                // execute query
+                echo $this->query;
+                $query = $this->query;
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param($this->types, ...$this->param);
+                $stmt->execute();
 
             break;
 

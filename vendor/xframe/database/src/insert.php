@@ -2,18 +2,18 @@
 
 namespace xframe\Database;
 
-trait Select {
+trait Insert {
 
     /** 
      * select query function
      * 
     */
 
-    function select() {
+    function insert() {
 
         $this->clean();
 
-        $this->query_type = "SELECT";
+        $this->query_type = "INSERT";
         return $this;
 
     }

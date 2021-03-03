@@ -27,12 +27,8 @@ trait clause {
 
     function column(string $column) {
 
-        if($this->query_type == "SELECT") {
-
-            $this->column = $column;
-            return $this;
-
-        }
+        $this->column = $column;
+        return $this;
 
     }
 
