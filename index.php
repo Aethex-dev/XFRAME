@@ -154,8 +154,9 @@ class xframe {
         // get real index
         include $this->root . '/public/' . $this->config['app-index'];
 
-        $db->update()->set('filename = ?')->types("s")->table("xe_theme_templates")->where('filename = "test"')->param(array(
+        $db->update()->set('filename = ?')->types("ss")->table("xe_theme_templates")->where('filename = ?')->param(array(
 
+            'john',
             'jack'
 
         ))->execute($conn);

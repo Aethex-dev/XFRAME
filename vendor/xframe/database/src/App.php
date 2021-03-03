@@ -1,5 +1,13 @@
 <?php
 
+/** 
+ * MySQLi Database Adapter
+ * 
+ * Author: XENONMC XFRAME
+ * PHP Min Version: 8.2.0
+ * 
+*/
+
 namespace xframe\Database;
 
 class App {
@@ -331,7 +339,6 @@ class App {
                 $this->compile();
 
                 // execute query
-                echo $this->query;
                 $query = $this->query;
 
                 if(!$stmt = $conn->prepare($query)) {
@@ -343,7 +350,6 @@ class App {
 
                 if(!$stmt->bind_param($this->types, ...$this->param)) {
 
-
                     error("MySQLi Database Adapter: Failed to execute query. Failed to bind query parameters.");
                     return false;
 
@@ -353,7 +359,7 @@ class App {
 
                     error("MySQLi Database Adapter: Failed to execute query. Failed to run execute on statement");
                     return false;
-                    
+
                 }
 
             break;
@@ -365,6 +371,14 @@ class App {
             break;
 
         }
+
+        /** 
+         * close mysqli query connection
+         * 
+        */
+                
+        $this->clean();
+        $stmt->close();
 
     }
 

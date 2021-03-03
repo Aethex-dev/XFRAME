@@ -1,6 +1,6 @@
 {
     "developer-mode": true,
     "default-config": "config.default.json",
-    "ignore-php-version": true,
+    "ignore-php-version": false,
     "app-index": "index.php"
 }
