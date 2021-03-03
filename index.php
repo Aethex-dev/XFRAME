@@ -5,7 +5,7 @@
  * DESCRIPTION: routes user to public index page
  * AUTHORS: XENONMC XFRAME
  * 
- * COPYRIGHT: XENONMC XFRAME 2017 - 2021. All Rights Reserved. All external dependencies belong to their respective owners, we do not claim to create them, All custom dependencies are owned by XENONMC XFRAME and should not be claimed as your own. Trying to do so will cause you to love privileges such as free support
+ * COPYRIGHT: XENONMC XFRAME 2017 - 2021. All Rights Reserved. All external dependencies belong to their respective owners, we do not claim to owner ship of them, All custom dependencies are owned by XENONMC XFRAME and should not be claimed as your own. Trying to do so will cause you to lose privileges such as free support
  * 
 */
 
@@ -22,6 +22,7 @@ namespace xframe\framework;
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+ignore_user_abort(1);
 
 // get config
 $config = json_decode(file_get_contents('config.json'), true);
@@ -153,17 +154,11 @@ class xframe {
         // get real index
         include $this->root . '/public/' . $this->config['app-index'];
 
-        $db
-        ->insert()
-        ->column("filename")
-        ->param(array(
+        $db->update()->set('filename = ?')->types("s")->table("xe_theme_templates")->where('filename = "test"')->param(array(
 
-            bin2hex(random_bytes(6))
+            'jack'
 
-        ))
-        ->table("xe_theme_templates")
-        ->types("s")
-        ->execute($conn);
+        ))->execute($conn);
 
         $db->select()->column("*")->table("xe_theme_templates")->execute($conn);
 
@@ -183,3 +178,10 @@ class xframe {
 */
 
 $xframe = new xframe($config['developer-mode']);
+
+/** 
+ * quit application on end 
+ * 
+*/
+
+exit();

@@ -46,6 +46,7 @@ class App {
 
     use Select;
     use Insert;
+    use Update;
 
     /** 
      * clean all mysqli query parameters
@@ -154,7 +155,14 @@ class App {
         }
 
         $query = str_replace("{[table]}", $this->table, $query);
-        $query = str_replace("{[column]}", $this->column, $query);
+
+        if(isset($this->column)) {
+
+            $query = str_replace("{[column]}", $this->column, $query);
+
+        }
+
+        $query = str_replace("{[set]}", $this->set, $query);
 
         $real_param = $this->param;
 
@@ -237,6 +245,25 @@ class App {
 
             break;
 
+            case "UPDATE":
+
+                $this->required(array(
+
+                    'table',
+                    'set',
+                    'where',
+                    'param'
+        
+                ));
+
+                $final = "UPDATE {[table]} SET {[set]} WHERE {[where]}";
+
+                $this->query = $final;
+
+                $this->query_built = true;
+
+            break;
+
             default:
 
                 error("MySQLI Database Adapter: Failed to execute query. Invalid [ query_type ].");
@@ -290,11 +317,44 @@ class App {
                 $this->compile();
 
                 // execute query
-                echo $this->query;
                 $query = $this->query;
                 $stmt = $conn->prepare($query);
                 $stmt->bind_param($this->types, ...$this->param);
                 $stmt->execute();
+
+            break;
+
+            case "UPDATE":
+
+                // finalize query
+                $this->build();
+                $this->compile();
+
+                // execute query
+                echo $this->query;
+                $query = $this->query;
+
+                if(!$stmt = $conn->prepare($query)) {
+
+                    error("MySQLi Database Adapter: Failed to execute query. Failed to prepare query statement.");
+                    return false;
+
+                }
+
+                if(!$stmt->bind_param($this->types, ...$this->param)) {
+
+
+                    error("MySQLi Database Adapter: Failed to execute query. Failed to bind query parameters.");
+                    return false;
+
+                }
+
+                if(!$stmt->execute()) {
+
+                    error("MySQLi Database Adapter: Failed to execute query. Failed to run execute on statement");
+                    return false;
+                    
+                }
 
             break;
 

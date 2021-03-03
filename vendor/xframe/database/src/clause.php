@@ -77,4 +77,16 @@ trait clause {
 
     }
 
+    /** 
+     * query set
+     * 
+    */
+
+    function set(string $set) {
+
+        $this->set = $set;
+        return $this;
+
+    }
+
 }
