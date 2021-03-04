@@ -169,7 +169,7 @@ class App {
 
     function get_app_config($app) {
 
-        $config = file_get_contents(str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']) . '/src/apps/' . $app . '/config.json');
+        $config = file_get_contents('src/apps/' . $app . '/config.json');
         $json = json_decode($config);
         return $json;
 
