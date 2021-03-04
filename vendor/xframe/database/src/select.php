@@ -2,7 +2,7 @@
 
 namespace xframe\Database;
 
-trait Select {
+trait select {
 
     /** 
      * select query function

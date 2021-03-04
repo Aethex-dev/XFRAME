@@ -52,9 +52,9 @@ class App {
      * 
     */
 
-    use Select;
-    use Insert;
-    use Update;
+    use select;
+    use insert;
+    use update;
 
     /** 
      * clean all mysqli query parameters

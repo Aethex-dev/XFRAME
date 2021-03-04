@@ -16,11 +16,23 @@ class App {
         $unparsed = $_SERVER['REQUEST_URI'] ?? '/';
 
         if($unparsed === '/') {
+
             $parsed = array_pad(array('/'), 20, "");
+
         } else {
             $unparsed = array_pad(explode("/", $unparsed, 20), 20, "");
             array_shift($unparsed);
             $parsed = $unparsed;
+
+        }
+
+        for ($i = 0 ; $i == 20; $i++) {
+
+            if(!isset($parsed[$i])) {
+
+                $parsed[$i] = "";
+
+            }
 
         }
 
@@ -96,13 +108,13 @@ class App {
 
         $apps = scandir(str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']) . '/src/apps/', 1);
 
-        for($x = 0; $x <= 1; $x++) {
-            unset($apps[count($apps)-1]);
-        }
+        $apps_withdir = $apps;
+        $apps_withdir = count($apps);
 
-        for($app = 0; $app <= count($apps) - 1; $app++) {
-            $output = $apps[$app];
-        }
+        unset($apps[$apps_withdir -= 1]);
+        unset($apps[$apps_withdir -= 1]);
+
+        $output = $apps;
 
         return $output;
 
@@ -134,7 +146,7 @@ class App {
      * 
     */
 
-    function get_request_action() {
+    function get_request_action($default = 'Index') {
 
         $url = $this->get_url();
 
@@ -142,7 +154,7 @@ class App {
             return $url[1];
         }
 
-        return 'Main';
+        return $default;
 
     }
 

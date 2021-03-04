@@ -1,0 +1,1 @@
+regiser controller main

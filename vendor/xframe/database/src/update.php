@@ -2,7 +2,7 @@
 
 namespace xframe\Database;
 
-trait Update {
+trait update {
 
     /** 
      * select query function

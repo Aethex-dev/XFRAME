@@ -2,7 +2,7 @@
 
 namespace xframe\Database;
 
-trait Insert {
+trait insert {
 
     /** 
      * select query function

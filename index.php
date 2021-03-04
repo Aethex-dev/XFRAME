@@ -3,30 +3,28 @@
 include 'vendor/autoload.php';
 include 'src/utils.php';
 
-$db = new \xframe\Database\App();
+$router = new  \xframe\Router\App();
 
-$conn = $db->connect(array(
+$apps = $router->get_all_apps();
 
-    'host' => 'localhost',
-    'username' => 'root',
-    'password' => '',
-    'database' => 'xframe',
-    'port' => 3306,
-    'charset' => 'utf8'
+foreach($apps as $app) {
 
-));
+    $conf = $router->get_app_config($app);
+    $conf = json_decode(json_encode($conf), true);
 
-$db->update()->set('filename = ?')->types("ss")->table("xe_theme_templates")->where('filename = ?')->param(array(
+    $app_found = false;
 
-    'john',
-    'jack'
+    if($conf['url'] == $router->get_url()[0]) {
 
-))->execute($conn);
+        include 'internal_data/cache/themes/Default/templates/' . $router->get_request_app() . '/' . $router->get_request_action('Index.html');
+        $app_found = true;
+        break;
 
-$db->select()->column("*")->table("xe_theme_templates")->execute($conn);
+    }
 
-while($row = $db->fetch()) {
+}
 
-    echo "filename: " . $row['filename'] . "<br>";
+if($app_found == false) {
+    echo "The requested page was not found";
 
 }
