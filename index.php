@@ -8,24 +8,29 @@ error_reporting(E_ALL);
 include 'vendor/autoload.php';
 include 'src/utils.php';
 
-$_SERVER['REQUEST_URI'] = array('about');
-
 $router = new  \xframe\Router\App();
 
 $apps = $router->get_all_apps();
 
+dumpf($apps);
+
 foreach($apps as $app) {
 
-    $conf = $router->get_app_config($app);
-    $conf = json_decode(json_encode($conf), true);
+    if(!$app == '.' || !$app == '..') {
 
-    $app_found = false;
+        $conf = $router->get_app_config($app);
+        $conf = json_decode(json_encode($conf), true);
 
-    if($conf['url'] == $router->get_url()[0]) {
+        $app_found = false;
+        $url = $router->get_url();
 
-        include 'internal_data/cache/themes/Default/templates/' . $router->get_request_app() . '/' . $router->get_request_action('Index.html');
-        $app_found = true;
-        break;
+        if($conf['url'] == $url[0]) {
+
+            include 'internal_data/cache/themes/Default/templates/' . $router->get_request_app() . '/' . $router->get_request_action('Index.html');
+            $app_found = true;
+            break;
+
+        }
 
     }
 

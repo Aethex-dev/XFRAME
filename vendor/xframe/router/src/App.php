@@ -20,6 +20,7 @@ class App {
             $parsed = array_pad(array('/'), 20, "");
 
         } else {
+
             $unparsed = array_pad(explode("/", $unparsed, 20), 20, "");
             array_shift($unparsed);
             $parsed = $unparsed;
@@ -109,10 +110,6 @@ class App {
         $apps = scandir('src/apps/');
 
         $apps_withdir = $apps;
-        $apps_withdir = count($apps);
-
-        unset($apps[$apps_withdir -= 1]);
-        unset($apps[$apps_withdir -= 1]);
 
         $output = $apps;
 
