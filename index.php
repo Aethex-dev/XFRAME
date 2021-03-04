@@ -16,21 +16,17 @@ dumpf($apps);
 
 foreach($apps as $app) {
 
-    if(!$app == '.' || !$app == '..') {
+    $conf = $router->get_app_config($app);
+    $conf = json_decode(json_encode($conf), true);
 
-        $conf = $router->get_app_config($app);
-        $conf = json_decode(json_encode($conf), true);
+    $app_found = false;
+    $url = $router->get_url();
 
-        $app_found = false;
-        $url = $router->get_url();
+    if($conf['url'] == $url[0]) {
 
-        if($conf['url'] == $url[0]) {
-
-            include 'internal_data/cache/themes/Default/templates/' . $router->get_request_app() . '/' . $router->get_request_action('Index.html');
-            $app_found = true;
-            break;
-
-        }
+        include 'internal_data/cache/themes/Default/templates/' . $router->get_request_app() . '/' . $router->get_request_action('Index.html');
+        $app_found = true;
+        break;
 
     }
 

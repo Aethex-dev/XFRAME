@@ -109,7 +109,19 @@ class App {
 
         $apps = scandir('src/apps/');
 
-        $apps_withdir = $apps;
+        $dir_info = -1;
+
+        foreach($apps as $app) {
+
+            $dir_info++;
+
+            if($app == '.' || $app == '..') {
+
+                unset($apps[$dir_info]);
+
+            }
+
+        }
 
         $output = $apps;
 
