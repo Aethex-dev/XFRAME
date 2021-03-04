@@ -8,6 +8,8 @@ error_reporting(E_ALL);
 include 'vendor/autoload.php';
 include 'src/utils.php';
 
+$_SERVER['REQUEST_URI'] = array('about');
+
 $router = new  \xframe\Router\App();
 
 $apps = $router->get_all_apps();
