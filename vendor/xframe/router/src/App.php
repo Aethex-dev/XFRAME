@@ -106,7 +106,7 @@ class App {
 
     function get_all_apps() {
 
-        $apps = scandir(str_replace('/src/apps/', 1);
+        $apps = scandir(str_replace('/src/apps/', 1));
 
         $apps_withdir = $apps;
         $apps_withdir = count($apps);
