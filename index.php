@@ -57,3 +57,31 @@ if($app_found == false) {
     echo "The requested page was not found";
 
 }
+
+$hii = 'hi';
+
+$file = "
+
+<if:2 == 2>
+
+    <if:2 == 2>
+
+        2 is equal to 2 too is
+
+    </if>
+
+    first one
+
+</if>
+
+{hii}
+
+";
+
+$file = preg_replace('~\<if:(.+?)\>~', '<?php if($1) { ?>', $file);
+$file = preg_replace('~\</if\>~', '<?php } ?>', $file);
+
+$file = preg_replace('~\{(.+?)\}~', '<?php echo ${\'$1\'} ?>', $file);
+$file = preg_replace('~\<set:(.+?) to (.+?)\>~', '<?php ${\'$1\'} = $2; ?>', $file);
+
+eval('?>' . $file . '<?');
