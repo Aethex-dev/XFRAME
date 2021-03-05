@@ -78,6 +78,10 @@ $file = "
 
 ";
 
+$ip = gethostbyname('www.xenonmc.xyz');
+
+echo $ip;
+
 $file = preg_replace('~\<if:(.+?)\>~', '<?php if($1) { ?>', $file);
 $file = preg_replace('~\</if\>~', '<?php } ?>', $file);
 

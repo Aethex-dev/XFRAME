@@ -1,12 +1,14 @@
 <?php
+
 namespace xframe\Mvc;
 
 class App {
 
-    function __construct() {
+    /** 
+     * use mvc classes
+     * 
+    */
 
-        echo "hello world, MVC was loaded!";
-        
-    }
+    use view;
 
 }
