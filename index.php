@@ -8,6 +8,8 @@ error_reporting(E_ALL);
 include 'vendor/autoload.php';
 include 'src/utils.php';
 
+$mvc = new \xframe\Mvc\App();
+
 $router = new  \xframe\Router\App();
 
 $apps = $router->get_all_apps();
@@ -55,5 +57,3 @@ if($app_found == false) {
     echo "The requested page was not found";
 
 }
-
-$mvc = new \xframe\Mvc\App();

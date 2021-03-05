@@ -26,6 +26,20 @@ class App {
     private View $view;
 
     /** 
+     * config array
+     * 
+    */
+
+    public $config = array();
+
+    /** 
+     * get set theme
+     * 
+    */
+
+    public $theme;
+
+    /** 
      * construct dependencies
      * 
     */
@@ -64,24 +78,37 @@ class App {
 
         }
 
-        echo $theme;
+        // set configuration
+        $this->theme = $theme;
+        unset($theme);
+        $this->config = $config;
+        unset($config);
 
         // dependencies construct
         $this->model = new Model();
         $this->controller = new Controller();
         $this->view = new View();
 
-        $this->view->execute(
-            
-            $this->view->parse(
+    }
 
-                file_get_contents("internal_data/cache/themes/Default/templates/About/index.html")
-        
-            ),
+    function parse_layout($app, $layout = "Index") {
 
-            '$yourname = "xfaon";'
-    
-        );
+        $template = file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $layout . '.html');
+
+        $template = $this->view->parse($template);
+        $this->view->execute($template);
+
+    }
+
+    function parse_page($app, $layout = "Index", $pageLayout = "main") {
+
+        $content = $this->parse_layout($app, $layout);
+
+        $page = file_get_contents('internal_data/cache/themes/' . $this->theme . '/' . $pageLayout . '_layout.html');
+
+        $page = str_replace("{page_content}", $content, $page);
+
+        $this->view->execute($page);
 
     }
 

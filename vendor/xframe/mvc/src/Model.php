@@ -6,8 +6,6 @@ class Model {
 
     function __construct() {
 
-        echo "them model";
-
     }
 
 }
