@@ -12,8 +12,6 @@ $router = new  \xframe\Router\App();
 
 $apps = $router->get_all_apps();
 
-dumpf($apps);
-
 foreach($apps as $app) {
 
     $conf = $router->get_app_config($app);
@@ -58,34 +56,4 @@ if($app_found == false) {
 
 }
 
-$hii = 'hi';
-
-$file = "
-
-<if:2 == 2>
-
-    <if:2 == 2>
-
-        2 is equal to 2 too is
-
-    </if>
-
-    first one
-
-</if>
-
-{hii}
-
-";
-
-$ip = gethostbyname('www.xenonmc.xyz');
-
-echo $ip;
-
-$file = preg_replace('~\<if:(.+?)\>~', '<?php if($1) { ?>', $file);
-$file = preg_replace('~\</if\>~', '<?php } ?>', $file);
-
-$file = preg_replace('~\{(.+?)\}~', '<?php echo ${\'$1\'} ?>', $file);
-$file = preg_replace('~\<set:(.+?) to (.+?)\>~', '<?php ${\'$1\'} = $2; ?>', $file);
-
-eval('?>' . $file . '<?');
+$mvc = new \xframe\Mvc\App();
