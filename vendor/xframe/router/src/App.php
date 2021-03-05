@@ -14,7 +14,22 @@ class App {
     function get_url() {
 
         // get unparsed uri
-        $unparsed = $_SERVER['REQUEST_URI'] ?? '/';
+        $path = $_SERVER['REQUEST_URI'];
+
+        $path_elements = explode("/", $path);
+        $tempPI = "";
+
+        if (isset($path_elements[2])){
+
+            for ($i = 2 ;$i < count($path_elements); $i++ ) {
+
+                $tempPI .= "/".$path_elements[$i];
+
+            }
+
+        }
+
+        $unparsed = $tempPI;
 
         // split url to array
         if($unparsed === '/') {
