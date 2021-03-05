@@ -22,9 +22,30 @@ foreach($apps as $app) {
     $app_found = false;
     $url = $router->get_url();
 
-    if($conf['url'] == $url[0]) {
+    if(strcasecmp($conf['url'], $url[0]) == 0) {
 
-        include 'internal_data/cache/themes/Default/templates/' . $router->get_request_app() . '/' . $router->get_request_action('Index.html');
+        if($url[1] != "") {
+
+            $path = 'src/apps/' . $router->get_request_app() . '/controllers/' . $url[1] .'.php';
+
+            if(file_exists($path)) {
+
+                include $path;
+
+            } else {
+
+                echo "error 404";
+
+            }
+
+        } else {
+
+            $path = 'src/apps/' . $router->get_request_app() . '/App.php';
+
+            include $path;
+
+        }
+
         $app_found = true;
         break;
 

@@ -140,7 +140,7 @@ class App {
 
         $url = $this->get_url();
 
-        if(strlen($url[1]) > 1) {
+        if(strlen($url[1]) > 0) {
             return true;
         }
 

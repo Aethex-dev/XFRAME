@@ -1,1 +1,1 @@
-regiser controller main
+about controller
