@@ -4,6 +4,8 @@
 
 <head>
 
+    <title>XENONMC</title>
+
     <style>
         body {
             margin: 0;
@@ -216,11 +218,21 @@
 
             <div class="links-wrapper">
 
-                <a class="link" href="#">HOME</a>
-                <a class="link" href="#">FORUMS</a>
-                <a class="link" href="#">LEADERBOARDS</a>
-                <a class="link" href="#">DOWNLOADS</a>
-                <a class="link" href="#">STORE</a>
+                <set:links to array("HOME", "FORUMS", "ABOUT", "STORE")/>
+
+                <foreach:[links] as [link]>
+
+                    <if:[link] == "HOME">
+
+                        <a class="link" href="/XFRAME/">{link}</a>
+
+                    <else>
+
+                        <a class="link" href="/XFRAME/{link}">{link}</a>
+
+                    </if>
+
+                </foreach>
 
             </div>
 
@@ -285,7 +297,7 @@
 
         <div class="main-wrapper">
 
-            {page_content}
+            &&page_content&&
 
         </div>
 

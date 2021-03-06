@@ -104,9 +104,9 @@ class App {
 
         $content = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $layout . '.html'));
 
-        $page = file_get_contents('internal_data/cache/themes/' . $this->theme . '/' . $pageLayout . '_layout.html');
+        $page = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/' . $pageLayout . '_layout.html'));
 
-        $page = str_replace("{page_content}", $content, $page);
+        $page = str_replace("&&page_content&&", $content, $page);
 
         $this->view->execute($page);
 

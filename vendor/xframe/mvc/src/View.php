@@ -30,12 +30,12 @@ class View {
         $template = preg_replace('~\</if\>~', '<?php } ?>', $template);
 
         // else statement parse
-        $template = preg_replace('~\<else/\>~', '<?php } else { ?>', $template);
-        $template = preg_replace('~\<elseif:(.+?)/\>~', '<?php } elseif($1) { ?>', $template);
+        $template = preg_replace('~\<else\>~', '<?php } else { ?>', $template);
+        $template = preg_replace('~\<elseif:(.+?)\>~', '<?php } elseif($1) { ?>', $template);
 
         // foreach statement parse
-        $template = preg_replace('~\<foreach:(.+?) as (.+?)/\>~', '<?php foreach($1 as $2) { ?>', $template);
-        $template = preg_replace('~\</foreach/\>~', '<?php } ?>', $template);
+        $template = preg_replace('~\<foreach:(.+?) as (.+?)\>~', '<?php foreach($1 as $2) { ?>', $template);
+        $template = preg_replace('~\</foreach\>~', '<?php } ?>', $template);
 
         // return parsed template file contents
         return $template;
