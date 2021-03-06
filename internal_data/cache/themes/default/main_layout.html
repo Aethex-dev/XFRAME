@@ -8,18 +8,26 @@
         body {
             margin: 0;
             max-width: 100vw;
+            background: #121212;
+            padding-top: 80px;
+            color: #fff;
+            font-family: sans-serif;
+            font-size: 13px;
         }
 
         .navbar-wrapper {
             width: 100%;
+            position: fixed;
             max-width: 100vw;
             height: 50px;
             overflow: hidden;
+            top: 0;
             background: #1e1e1e;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            z-index: 100050;
         }
 
         .navbar-wrapper .group {
@@ -58,11 +66,11 @@
 
         .navbar-wrapper .links-wrapper {
             display: flex;
-            flex-basis: initial;
             flex-direction: row;
             overflow: auto;
             margin-left: 20px;
             margin-right: 20px;
+            height: 100%;
         }
 
         .navbar-wrapper .links-wrapper .link {
@@ -72,7 +80,10 @@
             transition-duration: 300ms;
             font-family: sans-serif;
             font-size: 13px;
-            margin: 0px 5px 0px 5px;
+            padding: 0px 5px 0px 5px;
+            height: 50px;
+            display: flex;
+            align-items: center;
         }
 
         .navbar-wrapper .links-wrapper .link:hover {
@@ -83,27 +94,91 @@
             opacity: 100%;
         }
 
-        .navbar-wrapper .buttons-wrapper {
+        .subnav-wrapper {
+            width: 100%;
+            height: 30px;
+            position: fixed;
+            top: 50px;
+            background: #232323;
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            z-index: 100020;
+        }
+
+        .subnav-wrapper .buttons-wrapper {
+            display: flex;
+            margin-right: 20px;
             flex-direction: row;
             align-items: center;
         }
 
-        .navbar-wrapper .buttons-wrapper .button {
+        .subnav-wrapper .buttons-wrapper .button {
             display: flex;
             background: transparent;
             color: #fff;
             opacity: 60%;
+            font-size: 11px;
+            font-family: sans-serif;
             border: none;
             align-items: center;
             transition-duration: 300ms;
             outline: none;
             cursor: pointer;
-            margin: 0px 5px 0px 5px;
+            margin: 0px 0px 0px 0px;
+            height: 100%;
         }
 
-        .navbar-wrapper .buttons-wrapper .button .text {
+        .subnav-wrapper .buttons-wrapper .button .text {
             margin-left: 5px;
+        }
+
+        .subnav-wrapper .buttons-wrapper .button:hover {
+            opacity: 100%;
+            background: #2c2c2c;
+        }
+
+        .subnav-wrapper .buttons-wrapper .button:focus {
+            box-shadow: 0px 0px 5px #121212;
+            background: #2c2c2c;
+            opacity: 100%;
+            z-index: 100030;
+        }
+
+        .subnav-wrapper .breadcrumbs-wrapper {
+            display: flex;
+            overflow: auto;
+            align-items: center;
+            margin-left: 15px;
+            word-wrap: none;
+            white-space: nowrap;
+        }
+
+        .subnav-wrapper .breadcrumbs-wrapper ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        .subnav-wrapper .breadcrumbs-wrapper ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        .subnav-wrapper .breadcrumbs-wrapper a {
+            color: #fff;
+            opacity: 60%;
+            text-decoration: none;
+            font-size: 11px;
+            font-family: sans-serif;
+            margin-left: 5px;
+            margin-right: 5px;
+            display: flex;
+            flex-direction: row;
+            word-wrap: none;
+        }
+
+        .subnav-wrapper .breadcrumbs-wrapper span {
+            font-size: 10px;
+            color: #fff;
         }
     </style>
 
@@ -149,30 +224,56 @@
 
             </div>
 
-            <div class="buttons-wrapper">
+        </div>
 
-                <button class="button">
+    </nav>
 
-                    <i class="icon fal fa-clipboard"></i>
-                    <p class="text">REGISTER</p>
+    <nav class="subnav-wrapper">
 
-                </button>
+        <div class="breadcrumbs-wrapper">
 
-                <button class="button">
+            <a href="#">HOME</a>
 
-                    <i class="icon fal fa-clipboard"></i>
-                    <p class="text">LOGIN</p>
+            <span>></span>
 
-                </button>
+            <a href="#">FORUMS</a>
 
-                <button class="button">
+            <span>></span>
 
-                    <i class="icon fal fa-clipboard"></i>
-                    <p class="text">SEARCH</p>
+            <a href="#">THREAD</a>
 
-                </button>
+            <span>></span>
 
-            </div>
+            <a href="#">12341</a>
+
+            <span>></span>
+
+            <a href="#">WELCOME TO XENONMC</a>
+
+        </div>
+
+        <div class="buttons-wrapper">
+
+            <button class="button">
+
+                <i class="icon fal fa-clipboard"></i>
+                <p class="text">REGISTER</p>
+
+            </button>
+
+            <button class="button">
+
+                <i class="icon fal fa-key"></i>
+                <p class="text">LOGIN</p>
+
+            </button>
+
+            <button class="button">
+
+                <i class="icon fal fa-search"></i>
+                <p class="text">SEARCH</p>
+
+            </button>
 
         </div>
 
