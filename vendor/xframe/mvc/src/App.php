@@ -102,7 +102,7 @@ class App {
 
     function parse_page($app, $layout = "Index", $pageLayout = "main") {
 
-        $content = $this->parse_layout($app, $layout);
+        $content = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $layout . '.html'));
 
         $page = file_get_contents('internal_data/cache/themes/' . $this->theme . '/' . $pageLayout . '_layout.html');
 

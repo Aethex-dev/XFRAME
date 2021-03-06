@@ -47,7 +47,7 @@ class View {
 
     function execute($parsed, $input = '') {
 
-        eval($input . "?> $parsed <?");
+        eval($input . "?> $parsed <?php");
 
     }
 
