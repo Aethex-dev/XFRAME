@@ -102,9 +102,9 @@ class App {
 
     function parse_page($app, $layout = "Index", $pageLayout = "main") {
 
-        $content = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $layout . '.html'));
+        $content = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $layout . '.html'), $this->theme);
 
-        $page = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/' . $pageLayout . '_layout.html'));
+        $page = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/' . $pageLayout . '_layout.html'), $this->theme);
 
         $page = str_replace("&&page_content&&", $content, $page);
 

@@ -18,12 +18,15 @@ class View {
      * 
     */
 
-    function parse($template) {
+    function parse($template, $theme) {
 
         // variables parse
         $template = preg_replace('~\[(.+?)\]~', '$$1', $template);
         $template = preg_replace('~\{(.+?)\}~', '<?php echo ${\'$1\'}; ?>', $template);
         $template = preg_replace('~\<set:(.+?) to (.+?)/\>~', '<?php ${\'$1\'} = $2; ?>', $template);
+
+        // paths
+        $template = preg_replace('~\%\%root\%\%~', 'internal_data/cache/themes/' . $theme . '/', $template);
 
         // if statement parse
         $template = preg_replace('~\<if:(.+?)\>~', '<?php if($1) { ?>', $template);
