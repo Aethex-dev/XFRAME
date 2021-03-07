@@ -40,6 +40,9 @@ class View {
         $template = preg_replace('~\<foreach:(.+?) as (.+?)\>~', '<?php foreach($1 as $2) { ?>', $template);
         $template = preg_replace('~\</foreach\>~', '<?php } ?>', $template);
 
+        // comments
+        $template = preg_replace('~\/\/(.+)~', '', $template);
+
         // return parsed template file contents
         return $template;
 
