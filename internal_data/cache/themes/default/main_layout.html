@@ -4,8 +4,6 @@
 
 <head>
 
-    <title>XENONMC</title>
-
     <style>
         body {
             margin: 0;
@@ -70,9 +68,10 @@
             display: flex;
             flex-direction: row;
             overflow: auto;
-            margin-left: 20px;
-            margin-right: 20px;
+            margin-left: 60px;
+            padding-right: 20px;
             height: 100%;
+            transition-duration: 300ms;
         }
 
         .navbar-wrapper .links-wrapper .link {
@@ -182,6 +181,72 @@
             font-size: 10px;
             color: #fff;
         }
+
+        .content-wrapper {
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media (max-width: 830px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+        }
+
+        .content-wrapper .main-wrapper {
+            width: 100%;
+        }
+
+        .content-wrapper .sidebar-wrapper {
+            display: flex;
+            min-width: 250px;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 830px) {
+            .content-wrapper .sidebar-wrapper {
+                flex-flow: row wrap;
+                margin: 0;
+                margin-top: 10px;
+                align-items: stretch;
+                width: auto;
+                flex-grow: 0;
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+        }
+
+        .content-wrapper .sidebar-wrapper .block-wrapper {
+            background: #1e1e1e;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 830px) {
+            .content-wrapper .sidebar-wrapper .block-wrapper {
+                flex: 250px;
+                min-width: 250px;
+                margin: 0px 5px 10px 5px;
+            }
+        }
+
+        .content-wrapper .sidebar-wrapper .block-wrapper .header-wrapper {
+            width: 100%;
+            height: 30px;
+            background: #272727;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-wrapper .sidebar-wrapper .block-wrapper .body-wrapper {
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css">
@@ -218,21 +283,11 @@
 
             <div class="links-wrapper">
 
-                <set:links to array("HOME", "FORUMS", "ABOUT", "STORE")/>
-
-                <foreach:[links] as [link]>
-
-                    <if:[link] == "HOME">
-
-                        <a class="link" href="/XFRAME/">{link}</a>
-
-                    <else>
-
-                        <a class="link" href="/XFRAME/{link}">{link}</a>
-
-                    </if>
-
-                </foreach>
+                <a class="link" href="/XFRAME/">HOME</a>
+                <a class="link" href="/forums/">FORUMS</a>
+                <a class="link" href="/leaderboards/">LEADERBOARDS</a>
+                <a class="link" href="/downloads/">DOWNLOADS</a>
+                <a class="link" href="/store/">STORE</a>
 
             </div>
 
@@ -293,21 +348,87 @@
 
     <!-- END navigation -->
 
+    <!--   content   -->
+
     <div class="content-wrapper">
 
         <div class="main-wrapper">
 
             &&page_content&&
 
+            asdad
+            a
+            d
+            ad
+            ad
+
         </div>
 
         <div class="sidebar-wrapper">
 
-            sidebar content
+            <div class="block-wrapper">
+
+                <div class="header-wrapper">
+
+                    A BLOCK HEADER
+
+                </div>
+
+                <div class="body-wrapper">
+
+                    some block content
+
+                </div>
+
+            </div>
+
+            <div class="block-wrapper">
+
+                <div class="header-wrapper">
+
+                    A BLOCK HEADER
+
+                </div>
+
+                <div class="body-wrapper">
+
+                    <ul>
+
+                        <li>MEMBERS: 872817387123</li>
+                        <li>BANNED: 872817387123 * 2732</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="block-wrapper">
+
+                <div class="header-wrapper">
+
+                    A BLOCK HEADER
+
+                </div>
+
+                <div class="body-wrapper">
+
+                    <ul>
+
+                        <li>MEMBERS: 872817387123</li>
+                        <li>BANNED: 872817387123 * 2732</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
+
+    <!--   END content   -->
 
 </body>
 
