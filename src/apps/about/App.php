@@ -7,6 +7,11 @@ if(isset($_POST['layout'])) {
 
 } else {
 
-$this->parse_page($this->router->get_request_app(), "Index", "main");
+$this->parse_page($this->router->get_request_app(), "Index", "main", array(
+
+        'epic' => 'super coolvalue',
+        'varr' => ['one cool value', 'another one']
+
+));
 
 }

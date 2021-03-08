@@ -1,1 +1,4 @@
-composer.phar
+@echo off
+START script.php
+
+PAUSE

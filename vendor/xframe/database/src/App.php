@@ -55,6 +55,7 @@ class App {
     use select;
     use insert;
     use update;
+    use delete;
 
     /** 
      * clean all mysqli query parameters
@@ -76,7 +77,7 @@ class App {
      * 
      * @param array, all the connection parameters
      * 
-     * @return bool, returns if the connection was successful
+     * @return object, returns the new connection object
      * 
     */
 
@@ -170,7 +171,11 @@ class App {
 
         }
 
-        $query = str_replace("{[set]}", $this->set, $query);
+        if(isset($this->set)) {
+
+            $query = str_replace("{[set]}", $this->set, $query);
+
+        }
 
         $real_param = $this->param;
 

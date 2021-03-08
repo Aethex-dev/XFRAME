@@ -208,7 +208,7 @@ class App {
      * 
     */
 
-    function parse_page($app, $template = "Index", $layout = "main") {
+    function parse_page($app, $template = "Index", $layout = "main", $data = "") {
 
         // error handling
 
@@ -242,7 +242,7 @@ class App {
 
         $page = str_replace("&&page_content&&", $content, $page);
 
-        $this->view->execute($page);
+        $this->view->execute($page, $data);
 
     }
 

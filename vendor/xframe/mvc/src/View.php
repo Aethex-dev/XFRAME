@@ -58,9 +58,16 @@ class View {
      * 
     */
 
-    function execute($parsed, $input = '') {
+    function execute($parsed, array $inputs = null) {
 
-        eval($input . "?> $parsed <?php");
+        foreach($inputs as $input => $value) {
+
+            ${$input} = $value;
+
+        }
+        
+        // execute
+        eval("?> $parsed <?php");
 
     }
 
