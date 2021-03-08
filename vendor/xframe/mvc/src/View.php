@@ -23,7 +23,7 @@ class View {
         // variables parse
         $template = preg_replace('~\[(.+?)\]~', '$$1', $template);
         $template = preg_replace('~\{(.+?)\}~', '<?php echo ${\'$1\'}; ?>', $template);
-        $template = preg_replace('~\<set:(.+?) to (.+?)/\>~', '<?php ${\'$1\'} = $2; ?>', $template);
+        $template = preg_replace('~\<set:(.+?) to (.+?)/\>~', '<?php $$1 = $2; ?>', $template);
 
         // paths
         $template = preg_replace('~\%\%root\%\%~', 'internal_data/cache/themes/' . $theme . '/', $template);
@@ -41,7 +41,10 @@ class View {
         $template = preg_replace('~\</foreach\>~', '<?php } ?>', $template);
 
         // comments
-        $template = preg_replace('~\/\/(.+)~', '', $template);
+        $template = preg_replace('~\/\/c(.+)~', '', $template);
+
+        // include statement
+        $template = preg_replace('~\<include:(.+?)/\>~', '<?php include $1; ?>', $template);
 
         // return parsed template file contents
         return $template;

@@ -1,9 +1,10 @@
-// COPYRIGHT 2017 - 2020 XENONMC. All Rights Reserved.
+//c COPYRIGHT 2017 - 2020 XENONMC. All Rights Reserved.
 
 <!DOCTYPE html>
 <html>
 
 <!-- head -->
+
 <head>
 
     <!-- styles -->
@@ -42,9 +43,19 @@
 </head>
 
 <!-- body -->
+
 <body>
 
+    <!--   ajax progress   -->
+
+    <div class="ajaxloader-wrapper">
+
+        <div class="bar"></div>
+
+    </div>
+
     <!-- navigation -->
+
     <nav class="navbar-wrapper">
 
         <div class="group">
@@ -130,7 +141,10 @@
 
     </nav>
 
-    <!-- content -->
+    <!-- END navigation -->
+
+    <!--   content   -->
+
     <div class="content-wrapper">
 
         <div class="main-wrapper">
@@ -221,19 +235,20 @@
 
         <div class="links-wrapper">
 
-            <a class="link" href="#">
+            <a class="link" href="#" onclick="navigation.close_sidenav(); modal.open_modal();">
 
                 <i class="icon fal fa-house"></i>
 
-                <p class="text">HOME</p>
+                <p class="text">TEST MODAL</p>
 
             </a>
 
-            <a class="link" href="#">
+            <a class="link" href="#"
+                onclick="navigation.close_sidenav(); ajaxloader.show_ajaxloader('https://codepen.com');">
 
                 <i class="icon fal fa-house"></i>
 
-                <p class="text">HOME</p>
+                <p class="text">Ajax</p>
 
             </a>
 
@@ -257,7 +272,10 @@
 
     </div>
 
-    <!-- footer -->
+    <!--   END content   -->
+
+    <!--   footer   -->
+
     <footer class="footer-wrapper">
 
         <div class="blocks-wrapper">
@@ -310,18 +328,55 @@
 
     </footer>
 
+    <!--   END footer   -->
+
     <!-- snackbar -->
+
     <div class="snackbar-wrapper">
 
         <span class="text">Undefined</span>
 
-        <button class="button">
+        <button class="button" onclick="snackbar.close_snackbar()">
 
             <i class="icon fal fa-times"></i>
 
         </button>
 
     </div>
+
+    <!--   modal   -->
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-wrapper">
+
+        <div class="header-wrapper">
+
+            <span>MODAL</span>
+
+            <button class="button" onclick="modal.close_modal()">
+
+                <i class="icon fal fa-times"></i>
+
+            </button>
+
+        </div>
+
+        <div class="body-wrapper">
+
+            <p style="margin-left: 20px;">hello world</p>
+
+        </div>
+
+    </div>
+
+    <!--   device to small   -->
+
+    <div class="smallerror-wrapper">
+
+        <p>Sorry, but your device is too small to view this page properly</p>
+
+    <div>
 
 </body>
 

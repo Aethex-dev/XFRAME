@@ -16,6 +16,19 @@
 @logoFont: sans-serif;
 @mainFont: sans-serif;
 
+::-webkit-scrollbar-thumb {
+    background: @primaryColor;
+}
+
+::-webkit-scrollbar-track {
+    background: @level-1;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -127,6 +140,10 @@ body {
     z-index: 100020;
     border-bottom: 2px solid @level-7;
     
+    ::-webkit-scrollbar {
+        height:0px;
+    }
+    
     .buttons-wrapper {
         display: flex;
         margin-right:20px;
@@ -175,6 +192,7 @@ body {
         margin-left: 15px;
         word-wrap: none;
         white-space: nowrap;
+        margin-right: 20px;
         
         ::-webkit-scrollbar {
             width: 0px;
@@ -195,6 +213,11 @@ body {
             display: flex;
             flex-direction: row;
             word-wrap: none;
+            transition-duration: 300ms;
+        }
+        
+        a:hover {
+            opacity: 100%;
         }
         
         span {
@@ -389,10 +412,11 @@ body {
     .blocks-wrapper {
         display: flex;
         flex-flow: wrap;
+        margin: 0px 10px 0px 10px;
         
         .block-wrapper {
             flex: 1 1 250px;
-            margin: 0px 20px 10px 20px;
+            margin: 0px 10px 10px 10px;
             
             p {
                 margin: 0;
@@ -466,6 +490,7 @@ body {
     left: 23px;
     padding: 10px 50px 10px 10px;
     border-left: 3px solid #55ff55;
+    margin-right: 10px;
     
     .button {
         border: none;
@@ -490,6 +515,149 @@ body {
         width: calc(100% - 110px);
         padding: 10px 50px 10px 10px;
         max-width: calc(100% - 60px);
+    }
+    
+}
+
+// modal
+
+.modal-overlay {
+    width: 100%;
+    height: 100vh;
+    background: @level-1;
+    position: fixed;
+    z-index: 200000;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    background: @level-2;
+    transform: translate(-50%, -50%);
+    z-index: 200100;
+    width: 800px;
+    animation: modal_on_show 600ms ease 0s 1;
+    transition-duration: 300ms;
+    
+    @keyframes modal_on_show {
+        
+        from {
+            top: 30vh;
+        }
+        
+        top {
+            top: 50vh;
+        }
+        
+    }
+    
+    @media (max-width: 840px) {
+        width: calc(100vw - 40px)
+    }
+    
+    .header-wrapper {
+        width: calc(100% - 40px);
+        padding: 12px 20px;
+        display: flex;
+        background: @level-5;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        .button {
+            border: none;
+            background: transparent;
+            color: @text;
+            cursor: pointer;
+            transition-duration: 300ms;
+            opacity: 60%;
+            outline: none;
+            
+            &:hover {
+                opacity: 100%;
+            }
+            
+            &:focus {
+                opacity: 100%;
+            }
+            
+        }
+        
+    }
+    
+}
+
+// smallerror
+
+.smallerror-wrapper {
+    position: fixed;
+    top:-100vh;
+    left: 0;
+    width: 100vw;
+    opacity: 0;
+    height: 100vh;
+    overflow: hidden;
+    filter: blur(20px);
+    background: @level-1;
+    z-index: 500000;
+    transition-duration: 300ms;
+    
+    p {
+        margin: 20px;
+    }
+    
+    @media (max-width: 310px) {
+        display: flex;
+        top: 0;
+        height: 100vh;
+        filter: blur(0);
+        opacity: 1;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// ajax loader
+
+.ajaxloader-wrapper {
+    postion: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+    z-index: 700000;
+    
+    .bar {
+        width: 64%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        height: 2px;
+        background: @primaryColor;
+        animation: ajaxloader_load 1.5s ease 0s infinite;
+        transition-duration: 300ms;
+        
+        @keyframes ajaxloader_load {
+            
+            from {
+                left: -64%;
+            }
+            
+            to {
+                left: 100vw;
+            }
+            
+        }
+        
+    }
+    
+    .on {
+        opacity: 100%;
     }
     
 }

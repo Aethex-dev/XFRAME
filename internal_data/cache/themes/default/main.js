@@ -19,7 +19,7 @@ class p_navigation {
 
     /** 
      * close side bar navigation drawer
-     * 
+     *  
     */
 
     close_sidenav() {
@@ -150,8 +150,77 @@ class p_snackbar {
 
 let snackbar = new p_snackbar();
 
-$(".snackbar-wrapper .button").click(function() {
+class p_modal {
     
-    snackbar.close_snackbar();
+    close_modal() {
+        
+        var modal = $(".modal-wrapper");
+        var modal_overlay = $(".modal-overlay");
+        
+        modal.fadeOut(300);
+        modal.css("top", "70vh");
+        modal_overlay.fadeOut(300);
+        
+    }
     
-});
+    open_modal(url) {
+        
+        var modal = $(".modal-wrapper");
+        var modal_overlay = $(".modal-overlay");
+        var modal_content = $(".modal-wrapper .body-wrapper");
+        
+        ajaxloader.show_ajaxloader();
+        
+        $.ajax({
+            
+            url: url,
+            data: "layout=remote",
+            method: "POST",
+            
+            success: function(result) {
+                
+                modal_content.html(result);
+                ajaxloader.hide_ajaxloader();
+                
+                modal.fadeIn(300);
+                modal.css("top", "50vh");
+                modal_overlay.fadeIn(300);
+                
+            },
+            
+            error: function() {
+                
+                snackbar.open_snackbar("Error, something went wrong. More info may be availiable in the console");
+                ajaxloader.hide_ajaxloader();
+                
+            }
+            
+        });
+        
+    }
+    
+}
+
+let modal = new p_modal();
+
+class p_ajaxloader {
+    
+    show_ajaxloader() {
+        
+        var ajaxloader = $(".ajaxloader-wrapper .bar");
+        
+        ajaxloader.addClass("on");
+        
+    }
+    
+    hide_ajaxloader() {
+        
+        var ajaxloader = $(".ajaxloader-wrapper .bar");
+        
+        ajaxloader.removeClass("on");
+        
+    }
+    
+}
+
+let ajaxloader = new p_ajaxloader();
