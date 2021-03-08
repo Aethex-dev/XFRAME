@@ -54,6 +54,7 @@ foreach($apps as $app) {
 }
 
 if($app_found == false) {
+
     echo "The requested page was not found";
 
 }

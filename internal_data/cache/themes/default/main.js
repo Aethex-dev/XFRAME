@@ -178,8 +178,9 @@ class p_modal {
             method: "POST",
             
             success: function(result) {
+               
+                modal_content.contents().find('body').html(result);
                 
-                modal_content.html(result);
                 ajaxloader.hide_ajaxloader();
                 
                 modal.fadeIn(300);

@@ -95,7 +95,7 @@ class App {
 
         $template = file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $layout . '.html');
 
-        $template = $this->view->parse($template);
+        $template = $this->view->parse($template, $this->theme);
         $this->view->execute($template);
 
     }
