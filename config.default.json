@@ -1,5 +1,9 @@
 {
     "developer-mode": false,
     "default-config": "config.default.json",
-    "ignore-php-version": false
+    "ignore-php-version": true,
+    "app-index": "index.php",
+    "fixed-theme": false,
+    "theme": "Default",
+    "prefix": "xe_"
 }

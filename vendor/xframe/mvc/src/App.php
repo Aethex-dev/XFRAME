@@ -26,6 +26,13 @@ class App {
     private View $view;
 
     /** 
+     * router object
+     * 
+    */
+
+    private \xframe\Router\App $router;
+
+    /** 
      * config array
      * 
     */
@@ -81,6 +88,7 @@ class App {
         // set configuration
         $this->theme = $theme;
         unset($theme);
+
         $this->config = $config;
         unset($config);
 
@@ -88,23 +96,149 @@ class App {
         $this->model = new Model();
         $this->controller = new Controller();
         $this->view = new View();
+        $this->router = new \xframe\Router\App();
+
+        $this->compile();
 
     }
 
-    function parse_layout($app, $layout = "Index") {
+    /** 
+     * compile information from url headers, route data and execute application
+     * 
+    */
 
-        $template = file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $layout . '.html');
+    function compile() {
+
+        $apps = $this->router->get_all_apps();
+
+        foreach($apps as $app) {
+
+            $conf = $this->router->get_app_config($app);
+            $conf = json_decode(json_encode($conf), true);
+
+            $app_found = false;
+            $url = $this->router->get_url();
+
+            if(strcasecmp($conf['url'], $url[0]) == 0) {
+
+                if($url[1] != "") {
+
+                    $path = 'src/apps/' . $this->router->get_request_app() . '/controllers/' . $url[1] .'.php';
+
+                    if(file_exists($path)) {
+
+                        include $path;
+
+                    } else {
+
+                        echo "error 404";
+
+                    }
+
+                } else {
+
+                    $path = 'src/apps/' . $this->router->get_request_app() . '/App.php';
+
+                    include $path;
+
+                }
+
+                $app_found = true;
+                break;
+
+            }
+
+        }
+
+        if($app_found == false) {
+
+            echo "The requested page was not found";
+
+        }
+
+    }
+
+    /** 
+     * parse content only
+     * 
+     * @param string, name of the application to get layout from
+     * 
+     * @param string, page template to use before rendering
+     * 
+     * @return boolean, weather the content was parsed or not
+     * 
+    */
+
+    function parse_content($app, $template = "Index") {
+
+        // error handling
+        if(!file_exists('internal_data/cache/themes/' . $this->theme . '/templates/' . $app)) {
+
+            error("MVC: The template pack for [ $app ] does not exist.", true);
+
+            return false;
+
+        }
+
+        if(!file_exists('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $template . '.html')) {
+
+            error("MVC: The template [ $template ] does not exist in the theme [ $this->theme ].", true);
+
+            return false;
+
+        }
+
+        $template = file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $template . '.html');
 
         $template = $this->view->parse($template, $this->theme);
         $this->view->execute($template);
 
     }
 
-    function parse_page($app, $layout = "Index", $pageLayout = "main") {
+    /** 
+     * parse full page with layout and content
+     * 
+     * @param string, name of the application to get layout from
+     * 
+     * @param string, name of the content layout
+     * 
+     * @param string, name of the wrapper page layout
+     * 
+     * @return boolean, weather the page was parsed and executed or not
+     * 
+    */
 
-        $content = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $layout . '.html'), $this->theme);
+    function parse_page($app, $template = "Index", $layout = "main") {
 
-        $page = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/' . $pageLayout . '_layout.html'), $this->theme);
+        // error handling
+
+        if(!file_exists('internal_data/cache/themes/' . $this->theme . '/' . $layout . '_layout.html')) {
+
+            error("MVC: The page layout [ $layout ] does not exist in the theme pack [ $this->theme ].", true);
+
+            return false;
+
+        }
+
+        if(!file_exists('internal_data/cache/themes/' . $this->theme . '/templates/' . $app)) {
+
+            error("MVC: The template pack for [ $app ] does not exist.", true);
+
+            return false;
+
+        }
+
+        if(!file_exists('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $template . '.html')) {
+
+            error("MVC: The template [ $template ] does not exist in the theme [ $this->theme ].", true);
+
+            return false;
+
+        }
+
+        $content = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/templates/' . $app . '/' . $template . '.html'), $this->theme);
+
+        $page = $this->view->parse(file_get_contents('internal_data/cache/themes/' . $this->theme . '/' . $layout . '_layout.html'), $this->theme);
 
         $page = str_replace("&&page_content&&", $content, $page);
 

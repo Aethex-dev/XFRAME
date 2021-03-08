@@ -1,3 +1,3 @@
 <?php
 
-$mvc->parse_page($router->get_request_app(), "Index", "main");
+$this->parse_page($this->router->get_request_app(), "Index", "main");
