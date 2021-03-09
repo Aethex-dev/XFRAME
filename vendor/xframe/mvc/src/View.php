@@ -5,11 +5,11 @@ namespace xframe\Mvc;
 class View {
 
     /** 
-     * use syntax components
+     * path to website root from url
      * 
     */
 
-    use syntax;
+    public $server_path;
 
     /** 
      * parse template string
@@ -26,7 +26,7 @@ class View {
         $template = preg_replace('~\<set:(.+?) to (.+?)/\>~', '<?php $$1 = $2; ?>', $template);
 
         // paths
-        $template = preg_replace('~\%\%root\%\%~', 'internal_data/cache/themes/' . $theme . '/', $template);
+        $template = preg_replace('~\%\%root\%\%~', $this->server_path . '/internal_data/cache/themes/' . $theme . '/', $template);
 
         // if statement parse
         $template = preg_replace('~\<if:(.+?)\>~', '<?php if($1) { ?>', $template);
@@ -58,7 +58,7 @@ class View {
      * 
     */
 
-    function execute($parsed, array $inputs = null) {
+    function execute($parsed, array $inputs = []) {
 
         foreach($inputs as $input => $value) {
 
@@ -67,7 +67,7 @@ class View {
         }
         
         // execute
-        eval("?> $parsed <?php");
+        eval(" include 'src/apps/layout_controller.php'; ?> $parsed <?php");
 
     }
 

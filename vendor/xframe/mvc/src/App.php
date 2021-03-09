@@ -92,12 +92,16 @@ class App {
         $this->config = $config;
         unset($config);
 
-        // dependencies construct
+        // dependencies initialize
         $this->model = new Model();
         $this->controller = new Controller();
         $this->view = new View();
         $this->router = new \xframe\Router\App();
 
+        // configure dependencies
+        $this->view->server_path = $this->config['url']['root'];
+
+        // start compiling data
         $this->compile();
 
     }
@@ -110,13 +114,13 @@ class App {
     function compile() {
 
         $apps = $this->router->get_all_apps();
+        $app_found = false;
 
         foreach($apps as $app) {
 
             $conf = $this->router->get_app_config($app);
             $conf = json_decode(json_encode($conf), true);
 
-            $app_found = false;
             $url = $this->router->get_url();
 
             if(strcasecmp($conf['url'], $url[0]) == 0) {
@@ -152,7 +156,7 @@ class App {
 
         if($app_found == false) {
 
-            echo "The requested page was not found";
+            $this->parse_page('Errors', "404", "main");
 
         }
 
@@ -208,7 +212,7 @@ class App {
      * 
     */
 
-    function parse_page($app, $template = "Index", $layout = "main", $data = "") {
+    function parse_page($app, $template = "Index", $layout = "main", $data = []) {
 
         // error handling
         if(!file_exists('internal_data/cache/themes/' . $this->theme . '/' . $layout . '_layout.html')) {
