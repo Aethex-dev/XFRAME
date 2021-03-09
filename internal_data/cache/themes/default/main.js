@@ -252,6 +252,28 @@ $(document).ready(function () {
 
     });
 
+    $("a").click(function(event) {
+
+        if (this.classList.contains('focused')) {
+
+            this.classList.remove('focused');
+            modal.close_modal();
+
+        } else {
+
+            if (this.dataset.modal == "true") {
+
+                event.preventDefault();
+
+                modal.open_modal($(this).prop("href"), this);
+                this.classList.add('focused');
+
+            }
+
+        }
+
+    });
+
 });
 
 $(document).on('keydown', function (event) {

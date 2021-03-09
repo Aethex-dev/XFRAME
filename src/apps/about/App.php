@@ -1,5 +1,7 @@
 <?php
 
+sleep(1);
+
 dumpf($_POST);
 
 if(isset($_POST['layout'])) {
