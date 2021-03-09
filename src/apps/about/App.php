@@ -1,8 +1,9 @@
 <?php
 
+dumpf($_POST);
+
 if(isset($_POST['layout'])) {
 
-        echo $_COOKIE['xe_theme'];
         $this->parse_page($this->router->get_request_app(), "Index", "modal", array(
 
         'epic' => 'super coolvalue',

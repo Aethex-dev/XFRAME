@@ -175,13 +175,6 @@ body {
             opacity: 100%;
             background: @level-6;
         }
-        
-        .button:focus {
-            box-shadow: 0px 0px 5px @level-1;
-            background: @level-6;
-            opacity:100%;
-            z-index: 100030;
-        }
 
         .focused {
             box-shadow: 0px 0px 5px @level-1;
@@ -566,11 +559,11 @@ body {
     }
     
     @media (max-width: 840px) {
-        width: calc(100vw - 40px)
+        width: calc(100% - 40px)
     }
     
     .body-wrapper {
-        height: 280px;
+        max-height: 280px;
         width: 100%;
         border: none;
         overflow: auto;

@@ -6,11 +6,6 @@ class App {
 
     function __construct($mvc) {
 
-        $cache = new \xframe\Cache\App();
-        $cache->mkgroup('navigation');
-        $cache->get_cache_groups();
-        $cache->add_record();
-
         $db = new \xframe\Database\App();
 
         $conn = $db->connect(array(
