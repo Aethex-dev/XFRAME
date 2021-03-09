@@ -1,0 +1,21 @@
+{
+    "name": "xframe/database",
+    "description": "Database manager for XFRAME",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "XFRAME",
+            "email": "support@xenonmc.xyz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "xframe\\Database\\": "src/"
+        }
+    }
+}

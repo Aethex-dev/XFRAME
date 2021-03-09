@@ -165,7 +165,7 @@ class p_modal {
 
     }
 
-    open_modal(url, caller) {
+    open_modal(url, caller, layout) {
 
         this.caller = caller;
 
@@ -178,7 +178,7 @@ class p_modal {
         $.ajax({
 
             url: url,
-            data: "layout=remote",
+            data: "layout=" + layout,
             method: "POST",
 
             success: function (result) {
@@ -243,7 +243,17 @@ $(document).ready(function () {
 
             if (this.dataset.modal == "true") {
 
-                modal.open_modal(this.dataset.href, this);
+                if (typeof this.dataset.layout == 'undefined') {
+            
+                    var layout = "modal";
+        
+                } else {
+        
+                    var layout = this.dataset.layout;
+        
+                }
+
+                modal.open_modal(this.dataset.href, this, layout);
                 this.classList.add('focused');
 
             }
@@ -265,7 +275,17 @@ $(document).ready(function () {
 
                 event.preventDefault();
 
-                modal.open_modal($(this).prop("href"), this);
+                if (typeof this.dataset.layout == 'undefined') {
+            
+                    var layout = "modal";
+        
+                } else {
+        
+                    var layout = this.dataset.layout;
+        
+                }
+
+                modal.open_modal($(this).prop("href"), this, layout);
                 this.classList.add('focused');
 
             }
@@ -278,6 +298,8 @@ $(document).ready(function () {
 
 $(document).on('keydown', function (event) {
     if (event.key == "Escape") {
-        modal.close_modal()
+
+        modal.close_modal();
+
     }
 });

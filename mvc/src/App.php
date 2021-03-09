@@ -137,7 +137,7 @@ class App {
 
                 } else {
 
-                    $path = 'src/apps/' . ucfirst($app) . '/App.php';
+                    $path = 'src/apps/' . ucfirst($this->router->get_request_app()) . '/App.php';
 
                     include $path;
 
@@ -211,6 +211,7 @@ class App {
     function parse_page($app, $template = "Index", $layout = "main", $data = "") {
 
         // error handling
+
         if(!file_exists('internal_data/cache/themes/' . $this->theme . '/' . $layout . '_layout.html')) {
 
             error("MVC: The page layout [ $layout ] does not exist in the theme pack [ $this->theme ].", true);
@@ -218,7 +219,7 @@ class App {
             return false;
 
         }
-        
+
         if(!file_exists('internal_data/cache/themes/' . $this->theme . '/templates/' . $app)) {
 
             error("MVC: The template pack for [ $app ] does not exist.", true);

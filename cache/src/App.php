@@ -233,34 +233,4 @@ class App {
 
     }
 
-    /** 
-     * delete cache group
-     * 
-     * @param string, group name
-     * 
-     * @return boolean, if the group was deleted
-     * 
-    */
-
-    function delete_group($location) {
-
-        // error handling
-        if(!file_exists($this->cache_path . $location)) {
-
-            error("Cache Controller: The cache group [ $location ] does not exist.");
-            return false;
-
-        }
-
-        $location = $this->cache_path . $location;
-        unset($location);
-
-        if(!file_exists($this->cache_path . $location)) {
-
-            return true;
-
-        }
-
-    }
-
 }

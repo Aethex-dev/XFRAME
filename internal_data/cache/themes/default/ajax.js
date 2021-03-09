@@ -30,11 +30,21 @@ $(document).on('submit', "form", function(event) {
 
         var data = $(this).serialize();
 
+        if (typeof this.dataset.layout == 'undefined') {
+            
+            var layout = "modal";
+
+        } else {
+
+            var layout = this.dataset.layout;
+
+        }
+
         $.ajax({
         
             url: action,
             method: "POST",
-            data: data + "&layout=remote",
+            data: data + "&" + layout,
 
             success: function (result) {
             
