@@ -21,6 +21,12 @@ while($row = $db->fetch()) {
 
 }
 
+$db->delete()->table('xe_theme_templates')->where('filename = ? LIMIT 1')->param(array(
+
+    'john'
+
+))->types("s")->execute($conn);
+
 $this->parse_page($this->router->get_request_app(), "Index", "main", array(
 
     'rows' => $rows
