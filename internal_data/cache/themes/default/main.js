@@ -160,10 +160,14 @@ class p_modal {
         modal.fadeOut(300);
         modal.css("top", "70vh");
         modal_overlay.fadeOut(300);
+
+        this.caller.classList.remove('focused');
         
     }
     
-    open_modal(url) {
+    open_modal(url, caller) {
+
+        this.caller = caller;
         
         var modal = $(".modal-wrapper");
         var modal_overlay = $(".modal-overlay");
@@ -191,7 +195,7 @@ class p_modal {
             
             error: function() {
                 
-                snackbar.open_snackbar("Error, something went wrong. More info may be availiable in the console");
+                snackbar.open_snackbar("Error, something went wrong. More info may be available in the console");
                 ajaxloader.hide_ajaxloader();
                 
             }
@@ -225,3 +229,18 @@ class p_ajaxloader {
 }
 
 let ajaxloader = new p_ajaxloader();
+
+$(document).ready(function() {
+
+    $("button").click(function() {
+        
+        if (this.dataset.modal == "true") {
+            
+            modal.open_modal(this.dataset.href, this);
+            this.classList.add('focused');
+
+        }
+
+    });
+
+});

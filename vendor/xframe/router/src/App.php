@@ -167,7 +167,7 @@ class App {
 
         $dir_info = $dir_info - count($apps);
 
-        // remove files
+        // remove files from array
         foreach($apps as $app) {
 
             $dir_info++;
