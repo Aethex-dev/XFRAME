@@ -64,7 +64,7 @@
                 "issues": "https://github.com/ratchetphp/Ratchet/issues",
                 "source": "https://github.com/ratchetphp/Ratchet/tree/master"
             },
-            "install-path": "../../../XFRAME/vendor/cboden/ratchet"
+            "install-path": "../cboden/ratchet"
         },
         {
             "name": "evenement/evenement",
@@ -114,7 +114,7 @@
                 "issues": "https://github.com/igorw/evenement/issues",
                 "source": "https://github.com/igorw/evenement/tree/master"
             },
-            "install-path": "../../../XFRAME/vendor/evenement/evenement"
+            "install-path": "../evenement/evenement"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -192,7 +192,7 @@
                 "issues": "https://github.com/guzzle/psr7/issues",
                 "source": "https://github.com/guzzle/psr7/tree/1.x"
             },
-            "install-path": "../../../XFRAME/vendor/guzzlehttp/psr7"
+            "install-path": "../guzzlehttp/psr7"
         },
         {
             "name": "hbattat/verifyemail",
@@ -239,7 +239,7 @@
                 "issues": "https://github.com/hbattat/verifyEmail/issues",
                 "source": "https://github.com/hbattat/verifyEmail/tree/master"
             },
-            "install-path": "../../../XFRAME/vendor/hbattat/verifyemail"
+            "install-path": "../hbattat/verifyemail"
         },
         {
             "name": "hhxsv5/php-sse",
@@ -295,7 +295,7 @@
                 "issues": "https://github.com/hhxsv5/php-sse/issues",
                 "source": "https://github.com/hhxsv5/php-sse/tree/v2.0.1"
             },
-            "install-path": "../../../XFRAME/vendor/hhxsv5/php-sse"
+            "install-path": "../hhxsv5/php-sse"
         },
         {
             "name": "psr/http-message",
@@ -352,7 +352,7 @@
             "support": {
                 "source": "https://github.com/php-fig/http-message/tree/master"
             },
-            "install-path": "../../../XFRAME/vendor/psr/http-message"
+            "install-path": "../psr/http-message"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -399,7 +399,7 @@
                 "issues": "https://github.com/ralouphie/getallheaders/issues",
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
-            "install-path": "../../../XFRAME/vendor/ralouphie/getallheaders"
+            "install-path": "../ralouphie/getallheaders"
         },
         {
             "name": "ratchet/rfc6455",
@@ -459,7 +459,7 @@
                 "issues": "https://github.com/ratchetphp/RFC6455/issues",
                 "source": "https://github.com/ratchetphp/RFC6455/tree/v0.3"
             },
-            "install-path": "../../../XFRAME/vendor/ratchet/rfc6455"
+            "install-path": "../ratchet/rfc6455"
         },
         {
             "name": "react/cache",
@@ -538,7 +538,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/react/cache"
+            "install-path": "../react/cache"
         },
         {
             "name": "react/dns",
@@ -621,7 +621,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/react/dns"
+            "install-path": "../react/dns"
         },
         {
             "name": "react/event-loop",
@@ -670,7 +670,7 @@
                 "issues": "https://github.com/reactphp/event-loop/issues",
                 "source": "https://github.com/reactphp/event-loop/tree/v1.1.1"
             },
-            "install-path": "../../../XFRAME/vendor/react/event-loop"
+            "install-path": "../react/event-loop"
         },
         {
             "name": "react/promise",
@@ -733,7 +733,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/react/promise"
+            "install-path": "../react/promise"
         },
         {
             "name": "react/promise-timer",
@@ -793,7 +793,7 @@
                 "issues": "https://github.com/reactphp/promise-timer/issues",
                 "source": "https://github.com/reactphp/promise-timer/tree/v1.6.0"
             },
-            "install-path": "../../../XFRAME/vendor/react/promise-timer"
+            "install-path": "../react/promise-timer"
         },
         {
             "name": "react/socket",
@@ -880,7 +880,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/react/socket"
+            "install-path": "../react/socket"
         },
         {
             "name": "react/stream",
@@ -933,7 +933,7 @@
                 "issues": "https://github.com/reactphp/stream/issues",
                 "source": "https://github.com/reactphp/stream/tree/v1.1.1"
             },
-            "install-path": "../../../XFRAME/vendor/react/stream"
+            "install-path": "../react/stream"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -1004,7 +1004,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/symfony/deprecation-contracts"
+            "install-path": "../symfony/deprecation-contracts"
         },
         {
             "name": "symfony/http-foundation",
@@ -1081,7 +1081,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/symfony/http-foundation"
+            "install-path": "../symfony/http-foundation"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1165,7 +1165,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/symfony/polyfill-mbstring"
+            "install-path": "../symfony/polyfill-mbstring"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1252,7 +1252,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/symfony/polyfill-php80"
+            "install-path": "../symfony/polyfill-php80"
         },
         {
             "name": "symfony/routing",
@@ -1346,7 +1346,51 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../XFRAME/vendor/symfony/routing"
+            "install-path": "../symfony/routing"
+        },
+        {
+            "name": "xframe/cache",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XFRAME-CACHE.git",
+                "reference": "2941e0f8e546b212b2b3c1f56c5e00816d55bdba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-CACHE/zipball/2941e0f8e546b212b2b3c1f56c5e00816d55bdba",
+                "reference": "2941e0f8e546b212b2b3c1f56c5e00816d55bdba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "time": "2021-03-09T01:58:02+00:00",
+            "default-branch": true,
+            "type": "package",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "xframe\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XFRAME",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "description": "Cache controller for XFRAME",
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XFRAME-CACHE/issues",
+                "source": "https://github.com/XENONMC-DEV/XFRAME-CACHE/tree/main"
+            },
+            "install-path": "../xframe/cache"
         },
         {
             "name": "xframe/database",
@@ -1390,7 +1434,7 @@
                 "issues": "https://github.com/XENONMC-DEV/XFRAME-DATABASE/issues",
                 "source": "https://github.com/XENONMC-DEV/XFRAME-DATABASE/tree/main"
             },
-            "install-path": "../../../XFRAME/vendor/xframe/database"
+            "install-path": "../xframe/database"
         },
         {
             "name": "xframe/mvc",
@@ -1434,7 +1478,7 @@
                 "issues": "https://github.com/XENONMC-DEV/XFRAME-MVC/issues",
                 "source": "https://github.com/XENONMC-DEV/XFRAME-MVC/tree/main"
             },
-            "install-path": "../../../XFRAME/vendor/xframe/mvc"
+            "install-path": "../xframe/mvc"
         },
         {
             "name": "xframe/router",
@@ -1478,7 +1522,7 @@
                 "issues": "https://github.com/XENONMC-DEV/XFRAME-ROUTER/issues",
                 "source": "https://github.com/XENONMC-DEV/XFRAME-ROUTER/tree/main"
             },
-            "install-path": "../../../XFRAME/vendor/xframe/router"
+            "install-path": "../xframe/router"
         }
     ],
     "dev": true,

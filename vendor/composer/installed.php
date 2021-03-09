@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'fcf427e619ea286ebd727cbbf4f9a9ef814b01e1',
+    'reference' => '31bc3161695549ae5fa08814a6d0ceba40a790ba',
     'name' => 'xenonmc/xframe',
   ),
   'versions' => 
@@ -213,7 +213,17 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'fcf427e619ea286ebd727cbbf4f9a9ef814b01e1',
+      'reference' => '31bc3161695549ae5fa08814a6d0ceba40a790ba',
+    ),
+    'xframe/cache' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '2941e0f8e546b212b2b3c1f56c5e00816d55bdba',
     ),
     'xframe/database' => 
     array (

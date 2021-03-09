@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c940792ec8651c2674b3a7bca950d103",
+    "content-hash": "c22d254564c01337b9b106b88a919ef3",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -1295,6 +1295,47 @@
             "time": "2021-02-23T10:10:15+00:00"
         },
         {
+            "name": "xframe/cache",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/XENONMC-DEV/XFRAME-CACHE.git",
+                "reference": "2941e0f8e546b212b2b3c1f56c5e00816d55bdba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/XENONMC-DEV/XFRAME-CACHE/zipball/2941e0f8e546b212b2b3c1f56c5e00816d55bdba",
+                "reference": "2941e0f8e546b212b2b3c1f56c5e00816d55bdba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "xframe\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "XFRAME",
+                    "email": "support@xenonmc.xyz"
+                }
+            ],
+            "description": "Cache controller for XFRAME",
+            "support": {
+                "issues": "https://github.com/XENONMC-DEV/XFRAME-CACHE/issues",
+                "source": "https://github.com/XENONMC-DEV/XFRAME-CACHE/tree/main"
+            },
+            "time": "2021-03-09T01:58:02+00:00"
+        },
+        {
             "name": "xframe/database",
             "version": "dev-main",
             "source": {
@@ -1426,7 +1467,8 @@
         "hbattat/verifyemail": 20,
         "xframe/router": 20,
         "xframe/mvc": 20,
-        "xframe/database": 20
+        "xframe/database": 20,
+        "xframe/cache": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -20,6 +20,7 @@
         "xframe/router": "dev-main",
         "hhxsv5/php-sse": "~2.0",
         "xframe/mvc": "dev-main",
-        "xframe/database": "dev-main"
+        "xframe/database": "dev-main",
+        "xframe/cache": "dev-main"
     }
 }

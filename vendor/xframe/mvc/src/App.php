@@ -30,7 +30,7 @@ class App {
      * 
     */
 
-    private \xframe\Router\App $router;
+    public \xframe\Router\App $router;
 
     /** 
      * config array
@@ -137,7 +137,7 @@ class App {
 
                 } else {
 
-                    $path = 'src/apps/' . $this->router->get_request_app() . '/App.php';
+                    $path = 'src/apps/' . ucfirst($this->router->get_request_app()) . '/App.php';
 
                     include $path;
 

@@ -163,6 +163,23 @@ class App {
 
         }
 
+        unset($app);
+
+        $dir_info = $dir_info - count($apps);
+
+        // remove files
+        foreach($apps as $app) {
+
+            $dir_info++;
+
+            if(is_file('src/apps/' . $app)) {
+
+                unset($apps[$dir_info]);
+
+            }
+
+        }
+
         // return applications array
         $output = $apps;
         return $output;

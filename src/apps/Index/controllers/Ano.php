@@ -2,9 +2,11 @@
 
 namespace apps\Index;
 
-class App {
+class Ano {
 
-    function __construct($mvc) {
+    function onReady($mvc) {
+
+        echo "odnadasdassssssssssssssssssssssssssssssssssssss";
 
         $db = new \xframe\Database\App();
 
@@ -43,4 +45,4 @@ class App {
 
 }
 
-$app = new App($this);
+echo "d";

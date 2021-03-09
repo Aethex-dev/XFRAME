@@ -9,6 +9,7 @@ return array(
     'xframe\\Router\\' => array($vendorDir . '/xframe/router/src'),
     'xframe\\Mvc\\' => array($vendorDir . '/xframe/mvc/src'),
     'xframe\\Database\\' => array($vendorDir . '/xframe/database/src'),
+    'xframe\\Cache\\' => array($vendorDir . '/xframe/cache/src'),
     'hbattat\\' => array($vendorDir . '/hbattat/verifyemail/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
