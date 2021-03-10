@@ -10,6 +10,8 @@ Hey!  Welcome to our framework.  This framework contains many packages and can e
 
 #### INSTALLATION
 
+There are a few different ways to install our framework, the most recomended way is via composer.
+
 #### UPDATING
 
 ### MVC
