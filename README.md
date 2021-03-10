@@ -12,12 +12,12 @@ Hey!  Welcome to our framework.  This framework contains many packages and can e
 
 There are a few different ways to install our framework, our most recomended way is via our installer. 
 
-**DOWNLOADING THE INSTALLER**
+###### DOWNLOADING THE INSTALLER
 
 First, download the framework installer by clicking [here](https://github.com/XENONMC-DEV/XFRAME-INSTALLER/archive/main.zip)
 Next, extract the installer to your webserver to where you want the framework to be installed, we recomend installing it to the root of the site.
 
-**RUNNING THE INSTALLER**
+###### RUNNING THE INSTALLER
 
 To run the installer, just navigate to the install file from the webaddress of your website, 
 for example, lets say you installed it to a folder named `MyProject`, then you would navigate to it via a url similar to this:
