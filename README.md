@@ -5,4 +5,6 @@ Hey!  Welcome to our framework.  This framework contains many packages and can e
 
 ### GETTING STARTED
 
-  - Installation
+  - [Installation](#installation)
+
+## INSTALLATION
