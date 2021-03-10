@@ -22,6 +22,9 @@ Next, extract the installer to your webserver to where you want the framework to
 To run the installer, just navigate to the install file from the webaddress of your website, 
 for example, lets say you installed it to a folder named `MyProject`, then you would navigate to it via a url similar to this:
   `https://example-domain.com/MyProject/install.php`.
+  
+Once done, the installer will ask to start the installation following some other confermation info, if everything looks correct, you may start the installation.
+Finaly, when the installer propts you saying the install is complete you may close the page, and thats it, you succesfully installed XFRAME!
 
 #### UPDATING
 
