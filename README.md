@@ -5,6 +5,12 @@ Hey!  Welcome to our framework.  This framework contains many packages and can e
 
 ### GETTING STARTED
 
-  - [Installation](#installation)
+  - [INSTALLATION](#installation)
+  - [UPDATING](#updating)
+  - [CREATING A HELLO WORLD APP](#creating a hello world app)
 
 #### INSTALLATION
+
+#### UPDATING
+
+#### CREATING A HELLO WORLD APP
