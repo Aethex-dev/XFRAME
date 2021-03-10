@@ -1,5 +1,7 @@
 <?php
 
+namespace xframe;
+
 /** 
  * XFRAME MVC Framework
  * 
