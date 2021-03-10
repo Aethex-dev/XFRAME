@@ -10,7 +10,9 @@ Hey!  Welcome to our framework.  This framework contains many packages and can e
 
 #### INSTALLATION
 
-There are a few different ways to install our framework, the most recomended way is via composer.
+There are a few different ways to install our framework, our most recomended way is via archive.  
+
+First, download the framework as a zip by clicking [here](https://github.com/XENONMC-DEV/XFRAME/archive/main.zip)
 
 #### UPDATING
 
