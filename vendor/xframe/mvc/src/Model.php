@@ -4,7 +4,14 @@ namespace xframe\Mvc;
 
 class Model {
 
-    function __construct() {
+    /** 
+     * construct
+     * 
+    */
+
+    function __construct($mvc) {
+
+        $this->mvc = $mvc;
 
     }
 

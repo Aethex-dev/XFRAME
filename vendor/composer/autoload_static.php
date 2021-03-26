@@ -50,6 +50,7 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'M' => 
         array (
@@ -142,6 +143,10 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'MyApp\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -157,6 +162,13 @@ class ComposerStaticInit8e42dca6c551dc9ee4f505a5bcd13d64
     );
 
     public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Parsedown' => 
+            array (
+                0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+        ),
         'E' => 
         array (
             'Evenement' => 

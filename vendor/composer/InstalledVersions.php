@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '31bc3161695549ae5fa08814a6d0ceba40a790ba',
+    'reference' => '5a3ee5ecabd9b04c7ed1dddd2b86b3a009ef8ddd',
     'name' => 'xenonmc/xframe',
   ),
   'versions' => 
@@ -44,6 +44,16 @@ private static $installed = array (
         0 => '9999999-dev',
       ),
       'reference' => '36983e12ffff4eaf042106b7341c7f99f7e3072a',
+    ),
+    'erusev/parsedown' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '6598f3860c2698fe2f0f1bc98212fc01d0a1893c',
     ),
     'evenement/evenement' => 
     array (
@@ -81,6 +91,16 @@ private static $installed = array (
       array (
       ),
       'reference' => '5aee564f273427e1740d29ecf1af8930919c387f',
+    ),
+    'phpmailer/phpmailer' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '4a08cf4cdd2c38d12ee2b9fa69e5d235f37a6dcb',
     ),
     'psr/http-message' => 
     array (
@@ -237,7 +257,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '31bc3161695549ae5fa08814a6d0ceba40a790ba',
+      'reference' => '5a3ee5ecabd9b04c7ed1dddd2b86b3a009ef8ddd',
     ),
     'xframe/cache' => 
     array (

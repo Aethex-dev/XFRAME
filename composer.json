@@ -8,11 +8,10 @@
             "email": "support@xenonmc.xyz"
         }
     ],
-    "minimum-stability": "stable",
-    "prefer-stable": true,
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "xframe\\": "src"
+            "MyApp\\": "src"
         }
     },
     "require": {
@@ -22,6 +21,8 @@
         "hhxsv5/php-sse": "~2.0",
         "xframe/mvc": "dev-main",
         "xframe/database": "dev-main",
-        "xframe/cache": "dev-main"
+        "xframe/cache": "dev-main",
+        "erusev/parsedown": "dev-master",
+        "phpmailer/phpmailer": "dev-master"
     }
 }
